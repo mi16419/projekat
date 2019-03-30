@@ -1,0 +1,272 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a4paper]{article}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{graphicx}
+
+\usepackage[english,serbian]{babel}
+%\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\usepackage{listings}
+
+\newcommand\todos[1]{\textcolor{red}{#1}}
+
+%\newtheorem{primer}{Пример}[section] %ćirilični primer
+\newtheorem{primer}{Primer}[section]
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1000,                % start line enumeration with line 1000
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Python,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+
+\title{Programski jezik SWIFT\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
+
+\author{Anđelković Dragica, Nikolić Igor,\\Pejović Petar, Mandić Igor\\ andjelkovic.dragica96@gmail.com, igor.nikolic032@hotmail.com,\\ petar.pejovic8@gmail.com, igormandic996@gmail.com}
+
+%\date{9.~april 2015.}
+
+\maketitle
+
+\abstract{
+U ovom tekstu je ukratko prikazana osnovna forma seminarskog rada}
+
+
+\tableofcontents
+
+\newpage
+
+\section{Uvod}
+\label{sec:uvod}
+Swift je novi programski jezik  opšte namene razvijen od strane kompanije Apple za iOS, macOS, watchOS, tvOS, Linux i z/OS. Dizajniran je da radi u Apple radnim okruženjima, Cocoa i Cocoa Touch i  postojećeg Objectiv-C koda pisanog za Apple proizvode. Podržava imperativni, objektno-orjantisani i funkcionalni način programiranja. Napravljen je upotrebom LLVM programskog prevodioca otvorenog koda i ukljucen je u Xcode, počev od verzije 6. Swift koristi izvršno okruženje programskog jezika Objective-C, što omogućava izvršavanje C, C++, Objective-C i Swift koda u okviru jednog programa.
+Namera kompanije Apple je bila  da Swift podrži mnoge ključne koncepte povezane sa programskim jezikom Objectiv-C.
+
+
+
+
+\section{Nastanak i istorijski razvoj, uticaji drugih programskih jezika}
+\label{sec:prviDeo}
+
+Razvoj programskog jezika Swift je započeo 2010. godine Chirs Lattner, koji je implementirao veći deo osnovne strukture jezika, za čije je postojanje znala samo nekolicina ljudi. Tek su krajem 2011. godine i drugi programeri počeli da sarađuju na projektu Swift, a u julu 2013 godine on je posato glavni fokus grupe Apple Developer Tools.
+
+Swift je predstavljen na međunarodnoj konferenciji programera (WWDC-Worldwide Developers Conference) 2014. godine, uz integrisano razvojno okruženje Xcode 6 i OS 8. U decembru 2015. godine Apple je zvanično izdao Swift kao projekat otvorenog koda i pokrenuo je veb sajt \url{http://swift.org}, koji je posvećen zajednici Swift. Swift skladište se nalazi na GitHub stranici kompanije Apple (\url{http://github.com/apple}). Swift razvojno skladište (\url{https://github.com/apple/swift-evolution}) prati napredak Swifta, dokumentujući predložene promene. U razvojnom skladištu se može pronaći lista predloženih promena koje su prihvaćene i onih koje su odbijene. Swift 3 sadrži nekoliko poboljšanja koje je preporučila zajednica programera. Na razvoj Swifta uticali su mnogi programski jezici, od kojih su najznačajniji: Objective-C, Ruby, Haskell, Csarp, Python. U tabeli \ref{tab:tabela1} se nalaze sve do sada izbačene verzije programskog jezika Swift, u hronološkom redosledu.
+
+\begin{table}[h!]
+\begin{center}
+\caption{Istorijski razvoj programskog jezika Swift.}
+\begin{tabular}{|c|c|} \hline
+\label{tab:tabela1}
+Datum & Verzija \\ \hline
+2014-09-09 & Swift 1.0 \\ \hline
+2014-10-22 & Swift 1.1 \\ \hline
+2015-04-08 & Swift 1.2 \\ \hline
+2015-09-21 & Swift 2.0 \\ \hline
+2016-09-13 & Swift 3.0 \\ \hline
+2017-09-19 & Swift 4.0 \\ \hline
+2018-03-29 & Swift 4.1 \\ \hline
+2018-09-17 & Swift 4.2 \\ \hline
+2019-02-28 & Swift 4.3 \\ \hline
+... & Swift 5.0 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\subsection{Swift 1}
+\label{subsec:podnaslov1}
+Prvu verziju karakteriše REPL alat koji omogućava izvršavanje  manjih fragmenata Swift koda i njegovo testiranje sa komandne linije. U Swift 1.2  verziji uvedena je nova struktura podataka - skup. Ova verzija je donela poboljšanja performansi kompajlera i smanjila vreme potrebno za kompajliranje Swift programa. Prilikom pokretanja projekta, kompajliraju se samo fajlovi kod kojih je detektovana izmena, što je posebno značajno kod većih projekata.  
+
+
+\subsection{Swift 2}
+\label{subsec:podnaslov2}
+Glavne funkcionalnosti koje su ugrađene u programski jezik su:
+\begin{itemize}
+\item programiranje orjentisano na protokole,
+\item model za obradu grešaka,
+\item odlaganje izvršavanja naredbe pomoću ključne reči defer,
+\item provera da li je funkcija dostupna na trenutnoj verziji uređaja i platforme koja pokreće našu aplikaciju pomoću ključne reči available.
+\end{itemize}
+
+U drugoj verziji, kao deo novog projekta, predstvljen je Swift paket menadžer za upravljanje Swift bibliotekama. Kao priprema za naredne verzije dodata je provera verzije izvršnog okruženja.
+
+\subsection{Swift 3}
+\label{subsec:podnaslov3}
+Treća verzija sadrži osnovne promene u samom jeziku i biiblioteci Swift standarda, zbog toga nije kompatibilan sa prethodnim verzijama Swift jezika. Jedan od osnovnih ciljeva autora Swifta 3 je da on bude kompatibilan na više platformi, tako da kod koji se napiše za jednu platformu bude kompatibilan na svim drugim platformama. To znači da će kod koji se napise za MAC OS funkcionisati i na Linuxu. 
+
+
+\subsection{Swift 4}
+\label{subsec:podnaslov4}
+Četvrta verzija je kompatibilna sa trećom. Nove karakteristike koje je podržala četvrta verzija su:
+\begin{itemize}
+\item parsiranje fajlova u json i xml formatu,
+\item jednostrano definisani opsezi,
+\item poboljšanje funkcionalnosti struktura podataka: rečnik i skup,
+\item kombinovanje klasa i protokola,
+\item pisanje generičkih podskripti.
+\end{itemize}
+
+
+\section{Osnovna namena programskog jezika, svrha i mogućnosti}	
+\label{sec:drugiDeo}
+
+Dacin deo \\
+Dacin deo \\
+Dacin deo \\
+Dacin deo \\
+Dacin deo \\
+Dacin deo \\
+Dacin deo \\
+Dacin deo \\
+
+
+
+\section{Osnovne osobine ovog programskog jezika, podržane paradigme i koncepti}	
+\label{sec:treciDeo}
+
+Moj deo \\
+Moj deo \\
+Moj deo \\
+Moj deo \\
+Moj deo \\
+Moj deo \\
+Moj deo \\
+
+
+
+
+\section{Najpoznatija okruženja (framework) za korišćenje ovog jezika i njihove karakteristike}	
+\label{sec:cetvrtiDeo}
+
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+
+
+
+
+\section{Instalacija i uputstvo za pokretanje na Linux/Windows operativnim sistemima }	
+\label{sec:petiDeo}
+
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+Igorov deo \\
+
+
+
+\section{Primer jednostavnog koda i njegovo objašnjene}	
+\label{sec:sestiDeo}
+
+Pekijev deo \\
+Pekijev deo \\
+Pekijev deo \\
+Pekijev deo \\
+Pekijev deo \\
+Pekijev deo \\
+Pekijev deo \\
+Pekijev deo \\
+
+Sablon za pisanje koda u latehu.
+
+\begin{lstlisting}[caption={Primer ubacivanja koda u tekst},frame=single, label=simple]
+# This program adds up integers in the command line
+import sys
+try:
+    total = sum(int(arg) for arg in sys.argv[1:])
+    print 'sum =', total
+except ValueError:
+    print 'Please supply integer arguments'
+\end{lstlisting}
+
+
+
+
+\section{Sve ono što je specifično i važno za sam taj programski jezik}	
+\label{sec:sedmiDeo}
+
+Moj deo \\
+Moj deo \\
+Moj deo \\
+Moj deo \\
+Moj deo \\
+Moj deo \\
+Moj deo \\
+
+
+
+
+\section{Zaključak}
+\label{sec:zakljucak}
+
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+Ovde pišem zaključak. 
+
+
+\addcontentsline{toc}{section}{Literatura}
+\appendix
+\bibliography{seminarski} 
+\bibliographystyle{plain}
+
+\appendix
+\section{Dodatak}
+Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
+Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
+Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
+Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
+Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
+
+
+\end{document}
+\grid
