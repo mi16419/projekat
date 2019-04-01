@@ -178,13 +178,52 @@ funkcija Swifta, već Xcodea i kompajlera. To je Mix and match. Ona omogućava k
 \section{Osnovne osobine ovog programskog jezika, podržane paradigme i koncepti}	
 \label{sec:treciDeo}
 
-Moj deo \\
-Moj deo \\
-Moj deo \\
-Moj deo \\
-Moj deo \\
-Moj deo \\
-Moj deo \\
+Swift je objektno orijentisan programski jezik, koji je Apple razvio sa ciljem da 
+se poboljšaju određeni delovi jezika Objective-C, ali da se i iskoriste njegove
+dobre osobine. Pored Objective-C, u jezik Swift su uključene i osobine i mnogih drugih jezika,
+kao sto su Python, Java, Ruby, Haskell.
+
+
+\subsection{Veza sa Objective-C}
+\label{subsec:podnaslovVeza}
+
+Jezik Swift predstavlja unapređenu, intuintivniju i pregledniju verziju jezika Objective-C.
+Nedostaci programskog jezika Objective-C u odnosu na Swift su:
+\begin{itemize}
+\item Delimično objektno orijentisan - Objective-C objektno orijentisane osobine je preuzeo od 		      jezika C. Sadrži i objekte i skalarne tipove podataka, sa tim što se objekti 
+	  nalaze unutar posebnog C tipa podataka(pokazivača).
+\item Sintaksa može da bude složena i teska za razumevanje.
+\item Provera tipova često može da se isključi, i često je isključena.
+\item Koristi ručno upravljanje memorijom.
+\end{itemize}
+
+Glavna osobina jezika Objective-C je kompatibilnost sa razvojnim okruženjem Cocoa.
+Cocoa API interfejsi su ugrađene komande, sa kojima kod programera mora da sarađuje kako bi
+se bilo šta dogodilo na nekom iOS uređaju. Cocoa Api interfejs je napisan u jezicima Objective-C i C. Swift je napravljen tako da može koristi većinu API interfejsa razvojnog okruženja Cocoa, i
+to mu omogućava pisanje iOS aplikacija. 
+
+
+\subsection{Osnovne osobine}
+\label{subsec:podnaslovOsobine}
+
+Najvažnije osobine programskog jezika Swift su:
+\begin{itemize}
+\item\textbf{Objektno orijentisan} - moderan objektno orijentisan jezik.
+\item\textbf{Funkcionalan} - sadrži osobine zbog kojih je pogodan za pisanje funkcionalnih programa.
+\item\textbf{Jasan} - lako se čita i lako piše, ima minimalne sintaksne ukrase i samo nekoliko skrivenih prečica. Njegova sintaksa je jasna, dosledna i očigledna.
+\item\textbf{Bezbedan} - zahteva jake tipove kako bi obezbedio da u svakom trenutku i on i programer znaju na šta se sve tipovi objekata pozivaju.
+\item\textbf{Ekonomičan} - mali jezik koji nudi samo neke osnovne tipove podataka i funkcionalnosti. Preostalo mora da bude dato kodom programera ili bibliotekama(razvojno okruženje Cocoa).
+\item\textbf{Upravlja memorijom} - automatski upravlja memorijom i programer ne treba o tome da brine.
+\item\textbf{Kompatibilnost sa razvojnim okruženjem Cocoa}
+\end{itemize}
+
+Ove osobine čine Swift izuzetnim jezikom za učenje iOS programiranja.
+
+\subsection{Paradigma}
+\label{subsec:podnaslovParadigma}
+
+Programski jezik Swift je objektno orijentisani jezik, ali podržava i funkcionalno i imperativno
+programiranje. Sadrži sve osnovne koncepte objektno orijentisanog programiranja, i objektno orijentisana paradigma je najzastupljenija u ovom jeziku. Međutim, nekoliko osobina Swift jezika, kao što su funkcije prvog reda, sofisticirani sistem tipizacije, lambda izrazi, korišćenje Karijevih funkcija i parcijalna aplikacija, čine jezik posebno pogodnim za pisanje funkcionalnih programa. Swift, kao funkcionalni jezik, može se u svakodnevnoj praksi koristiti za pisanje kraćih, elegantnijih i sigurnijih programa, koji su lakši za održavanje, nadgradnju i testiranje.
 
 
 
@@ -214,31 +253,141 @@ Igorov deo \\
 Igorov deo \\
 Igorov deo \\
 
-
+\newpage
 
 \section{Primer jednostavnog koda i njegovo objašnjene}	
 \label{sec:sestiDeo}
 
-Pekijev deo \\
-Pekijev deo \\
-Pekijev deo \\
-Pekijev deo \\
-Pekijev deo \\
-Pekijev deo \\
-Pekijev deo \\
-Pekijev deo \\
+U narednim primerima biće prikazane i objašnjene osnovne funkcionalnosti jezika Swift.
 
-Sablon za pisanje koda u latehu.
+\begin{lstlisting}[caption={},frame=single, label=simple]
 
-\begin{lstlisting}[caption={Primer ubacivanja koda u tekst},frame=single, label=simple]
-# This program adds up integers in the command line
-import sys
-try:
-    total = sum(int(arg) for arg in sys.argv[1:])
-    print 'sum =', total
-except ValueError:
-    print 'Please supply integer arguments'
+print("Hello world!")
+print("Hello world!");
+
 \end{lstlisting}
+
+Ispis teksta se vrši pomoću funkcije print(). Tačka-zarez su opcioni na kraju svakog reda.\\
+
+
+
+\begin{lstlisting}[caption={},frame=single, label=simple]
+
+var x = 5
+var y = 3
+
+if x == 5 {
+	print("x je 5");
+}
+
+if (x==3) {
+	print("x je 5");
+}
+
+if (x == 5)				//Syntax error
+	print("x je 5");
+
+\end{lstlisting}
+
+Nije strogo tipiziran (deklarišemo promenljive pomocu - var), a dodeljujemo vrednost pomoću operatora dodele.\\
+Zagrade kod provere uslova su opcione. Preporučujemo da se zagrade ne koriste, osim u slučaju kada imate više uslovnih iskaza u istoj liniji.\\
+Velike (vitičaste) zagrade moraju se koristiti kod if-grane i petlji, u suprotnom će doći do greške.\\
+I za uslovne iskaze (if i while) i za iskaze dodele (=) razmaci su opcioni.\\
+
+
+
+\begin{lstlisting}[caption={},frame=single, label=simple]
+
+var ime = "Swift"
+var jezik = "programski jezik"
+
+var poruka = " je najbolji "
+var poruka1 = "\ (ime) je najbolji \ (jezik) !" 
+
+print(ime,poruka,jezik,"!")
+print(poruka1)
+
+\end{lstlisting}
+
+Stringovi se takodje dodeljuju pomoću operatora dodele.\\
+Konkatenacija stringova se vrši pomoću specijalnih karaktera '$\backslash$ (string)' ili jednostavnim navodjenjem u naredbi 'print', gde se stringovi razdvajaju zarezima.\\
+
+
+
+\begin{lstlisting}[caption={},frame=single, label=simple]
+
+var ime1 = "Swift"
+var ime2 = "Java"
+var ime3 = "Python"
+var ime3 = ""
+
+print(ime1,ime2,ime3,separator:", ", terminator:"")
+print(ime1,ime2,ime3,separator:", ", terminator:"", to:&ime4)
+
+\end{lstlisting}
+
+Listu stringova koji su razdvojeni određenim separatorom, pravimo pomoću naredbe print, gde se prvo navode stringovi koji čine tu listu, a nakon toga separator i terminator.\\
+Možemo koristiti jos jedan parametar u funkciji print(), pod nazivom toStream. Pomoću njega preusmeravamo ispis funkcije print(). Konkretno u ovom primeru preusmeravamo ispis u promenljivu ime4.\\
+
+
+\begin{lstlisting}[caption={},frame=single, label=simple]
+
+var x:Int = 0
+for x in 0...10 {
+	print(x)
+}
+
+var y:String = ""
+while y != "aaaaa" {
+	print(y)
+	y = y + "a"
+}
+
+\end{lstlisting}
+
+U ovom primeru je pokazana funkcionalnost for i while petlje. Takodje jos jednom i mogućnost konkatenacije pomoću operatora +. Nakon for petlje u konzoli će biti ispisani brojevi od 0 do 10. U while petlji će se svakog puta dodavati po jedno slovo a, i tako 5 puta.
+
+
+\begin{lstlisting}[caption={},frame=single, label=simple]
+
+var score:Int = 0
+var currency:Float = 0
+
+func addToScore(points:Int, money:Float){
+	score = score + points
+	currency = currency + money
+}
+
+addToScore(points: 30, money: 1.45)
+addToScore(points: 60, money: 2.86)
+
+print(score)
+print(currency)
+
+\end{lstlisting}
+
+Pozivanje funkcije sa parametrima koja nema povratnu vrednost. Nakon dva poziva, u kojima moramo proslediti dva argumenta funcije, bice ispisana dva broja (90-score i 4.31-currency).\\
+
+
+\begin{lstlisting}[caption={},frame=single, label=simple]
+
+var x:Int = 1
+
+func function() -> Bool {
+	if(x == 0){
+		return false
+	} else {
+		return true
+	}
+}
+
+var y:Bool = function()
+
+\end{lstlisting}
+
+Pozivanje funkcije koja ima povratnu vrednost. Nakon poziva povratna vrednost funkcije u ovom slučaju je true, koju ujedno dobija i promenljiva y.\\
+
+
 
 
 
@@ -289,4 +438,5 @@ Ovde pišem dodatne stvari, ukoliko za time ima potrebe.
 
 
 \end{document}
+\grid
 \grid
