@@ -266,7 +266,7 @@ Programski jezik Swift se može pisati u različitim okruženjima. Najpoznatije 
 
 XCode je integrisano razvojno okruženje koje je napravila kompanija Apple. Koristi se za razvoj iOS i macOS aplikacija. U ovom okruženju mogu se pisati kodovi u mnogim programskim jezicima, kao sto su C, C++, Objective-C, Java, AppleScript, Python, Ruby i Swift. XCode sadrži i okvire, i za programski jezik Swift su najvažniji \textbf{Playground} i \textbf{Cocoa Touch}. 
 Postoji 9 verzija ovog okruženja, a od 6, obuhvata i programski jezik Swift.
-\vspace{5mm}
+\vspace{3mm}
 
 
 \includegraphics[scale=0.2]{xcode.jpg}
@@ -274,7 +274,7 @@ Postoji 9 verzija ovog okruženja, a od 6, obuhvata i programski jezik Swift.
 
 \subsection{Playground}
 \label{subsec:podnaslovPlayground}
-\vspace{5mm}
+\vspace{3mm}
 
 
 Playground je interaktivno radno okruženje koje omogućava da pišemo kod i odmah vidimo
@@ -286,7 +286,7 @@ Sastoji se od nekoliko delova, među kojima su najvažniji:
 \item bočna traka za rezultate
 \item prostor za ispravljanje gresaka
 \end{itemize}
-\vspace{5mm}
+\vspace{3mm}
 
 
 \includegraphics[scale=0.2]{playground.jpg}
@@ -294,93 +294,73 @@ Sastoji se od nekoliko delova, među kojima su najvažniji:
 \subsection{SublimeText}
 \label{subsec:podnaslovSublimeText}
 
-\vspace{5mm}
-
-
-
+\vspace{3mm}
 
 Sublime Text je verovatno jedan od najrasprostranjenijih okruzenja. Poseduje dobar korisnicki interfejs i sjajne performanse. On u osnovni podrzava mnoge programske jezike a nove funkcionalnosti mogu biti dodate koriscenjem dodataka(plugina), koji je zajednica razvijala pod licencom slobodnog softvera. Vrlo lako ga mozemo prilagoditi za razvoj swift aplikacija dodatkom podrske za swift pakete.
-\vspace{5mm}
+\vspace{3mm}
 
 
-\includegraphics[scale=0.3]{sublime.png}
+\includegraphics[scale=0.25]{sublime.png}
 
 \subsection{Atom}
 \label{subsec:podnaslovAtom}
-\vspace{5mm}
 Razvijen je od strane GitHub-a, visoko modularno okruzenje koje omogucava laku instalaciju novih paketa sto ga je svrstalo medju najpozeljnija okruzenja. Dodavanje podrske za swift programiranje je jednostavno instaliranjem language-swift paketa.
 
-\vspace{5mm}
+\vspace{3mm}
 
 \includegraphics[scale=0.2]{atom.jpg}
-\vspace{20mm}
+\vspace{10mm}
 
 \section{Instalacija i uputstvo za pokretanje}	
 \label{sec:petiDeo}
 
+Programski jezik Swift se može koristiti na različitim operativnim sistemima. Ukoliko koristimo MAC operativni sistem, dovoljno je da se preuzme i instalira XCode razvojno okruženje, jer XCode uključuje izdanje Swift-a koje podržava Apple. Za Linux i Windows instalacija i pokretanje je složenije, i biće prikazano u ovom poglavlju.
+
 \subsection{SWIFT na Windowsu}
 \label{subsec:podnaslovWindows}
 
-Na pocetku bice nam potreban editor teksta u kome zelimo da kodiramo. Mozemo koristiti bilo koje od gore navedenih razvojnih okruzenja u kojim nam je udobno da radimo. 
-U ovom primeru koristicemo \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}, koji je jednostavan,besplatan i lak za instalaciju.
-\vspace{5mm}
+Za instalaciju jezika Swift na Windowsu potrebno je prvo da ga preuzmemo sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga nam se pojavljuje prozor za instalaciju, gde pratimo dalja uputstva i tako instaliramo Swift i kompajler za ovaj jezik. Nakon završetka instalacije, potreban nam je editor teksta u kojem želimo da kodiramo. Možemo koristiti bilo koje od gore navedenih razvojnih okruženja u kojim nam je udobno da radimo. U ovom primeru koristićemo \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}, koji je jednostavan, besplatan i lak za instalaciju.
+\vspace{2mm}
 
 \includegraphics[scale=0.5]{notepadpp.png}
-\vspace{5mm}
+\vspace{2mm}
 
-Nakon instaliranja napisacemo jednostavan program koji cemo kasnije pokrenuti pomocu Windows komandne linije. Prvo je potrebno da otvorimo novi Notepad++ fajl i u njega unesemo komandu za ispis.
+Nakon instalacije okruženja, napisaćemo jednostavan program koji ćemo kasnije pokrenuti pomoću Windows komandne linije. Prvo je potrebno da otvorimo novi Notepad++ fajl, i u njega unosimo komandu za ispis.
 
 \begin{lstlisting}[caption={},frame=single, label=simple]
-
 print("Hello world!")
-
-
-
 \end{lstlisting}
-\vspace{5mm}
-Da bi sacuvali ovaj kod,koristicemo File > Save As i izabrati Swift file iz Save As Type menija.Ako u meniju nedostaje tip ovog fajla izabracemo all files, i dodati .swift fajl ekstenziju nakon sto smo izabrali odgovarajuce ime.
+\vspace{3mm}
+Da bi sačuvali ovaj kod, koristićemo File > Save As i izabrati Swift file iz Save As Type menija. Ako u meniju nedostaje tip ovog fajla izabraćemo all files, i dodati .swift fajl ekstenziju nakon što dali odgovarajuće ime fajlu.
 
-
-\subsection{Kompiliranje}
-\label{subsec:podnaslovKompiliranje}
-
-Sada kada imamo program,zelimo da ga kompiliramo i pokrenemo. Kako ne postoji kompajler za swift koji je integrisan u Windowsu moramo da instaliramo. Han Sangjin je napravio kompajler za Swift koji je moguce skinuti sa Github-a. Nakon sto preuzmemo i instalirmo Swift za Windows aplikacije korisnicki interfejs bi trebao da izgleda ovako:
+Sada kada imamo program, želimo da ga kompiliramo i pokrenemo. Za kompiliranje i pokretanje koristimo korisnički interfejs Swift-a koji bi trebalo ovako da izgleda:\\
 
 \includegraphics[scale=0.4]{swift-win.png}
-\vspace{5mm}
+\vspace{3mm}
 
-
-Nakon pritiska na Select File izabracemo nas program koji smo prethodno napisali i pritisnuti Compile. Nakon sto sacekamo da se kompilacije zavrsi dobicemo poruku “Successfully compiled”.
-Jednom kompiliran program mozemo pokrenuti neograniceni broj puta.
-
-
+Nakon pritiska na Select File izabraćemo naš program koji smo prethodno napisali i pritisnuti Compile. Nakon što sačekamo da se kompilacije završi dobićemo poruku “Successfully compiled”.
+Jednom kompiliran program možemo pokrenuti neograničen broj puta.
 
 \subsection{SWIFT na Linuxu}
 \label{subsec:podnaslovLinux}
 
-Kao i u prethodnom primeru bice nam potreban tekst editor gde cemo napisati jednostavan kod.
-Mozemo koristiti bilo koji integrisani editor koji linux poseduje. Na isti nacin cemo iskodirati poruku za ispis "Hello World" kao u prethodnom primeru. I sacuvacemo nas program sa ekstenzijom .swift.
+Kao i u prethodnom primeru biće nam potreban tekst editor gde cemo napisati jednostavan kod.
+Mozemo koristiti bilo koji integrisani editor koji linux poseduje. Na isti način ćemo iskodirati poruku za ispis "Hello World" kao u prethodnom primeru, i taj fajl ćemo sačuvati sa ekstenzijom .swift.
 
 Da bismo koristili SWIFT na linuxu moramo ga prvo instalirati.U terminalu kucamo sledece komande:
 
-
 \begin{lstlisting}[language=bash]
-
 	wget https://swift.org/builds/ubuntu1510/swift-2.2-SNAPSHOT-2015-12-10-a/swift-2.2-SNAPSHOT-2015-12-10-a-ubuntu15.10.tar.gz
 
 \end{lstlisting}
-Nakon preuzimanja,pozicioniracemo se u folder Downloads i tamo raspakovati arhivu u kojoj se nalazi swift instalacija.
-
-
+Nakon preuzimanja, pozicioniraćemo se u folder Downloads i tamo raspakovati arhivu u kojoj se nalazi swift instalacija.
 
 \begin{lstlisting}[language=bash]
   cd ~/Downloads
   tar -xvzf swift-2.2-SNAPSHOT*
 \end{lstlisting}
 
-Kada raspakujemo fajl potrebno je podesiti putanja do BIN-a kako bi mogli da izvrsavamo programe.
-
-\vspace{5mm}
+Kada raspakujemo fajl potrebno je podesiti putanja do BIN-a kako bi mogli da izvršavamo programe.
 
 \begin{lstlisting}[language=bash]
   cd ~/Downloads/swift-2.2-SNAPSHOT*
@@ -388,23 +368,20 @@ Kada raspakujemo fajl potrebno je podesiti putanja do BIN-a kako bi mogli da izv
   pwd
 \end{lstlisting}
 
-Kao rezultat komande pwd dobicete tacnu lokaciju koju cemo koristiti.Kopirajte je i zamenite je na sledeci nacin.
+Kao rezultat komande pwd dobićete tačnu lokaciju koju ćemo koristiti. Kopirajte je i zamenite je na sledeći način.
 \begin{lstlisting}[language=bash]
   export PATH=path_to_swift_usr_bin:$PATH
 
 \end{lstlisting}
-\includegraphics[scale=0.4]{swift-lin.jpeg}
 
-
-Zatim moramo instalirati jos par biblioteka kako bi omogucili da swift nesmetano funkcionise na linuxu.
-
+Zatim moramo instalirati jos par biblioteka kako bi omogućili da swift nesmetano funkcioniše na Linuksu.
 
 \begin{lstlisting}[language=bash]
   sudo apt-get install clang libicu-dev
   swift -version
 \end{lstlisting}
 
-I na kraju da bismo kompilirali i pokrenuli prethodno napisan program potrebno je da ukucamo sledece komande:
+Na kraju, da bismo kompilirali i pokrenuli prethodno napisan program potrebno je da ukucamo sledeće komande:
 
 \begin{lstlisting}[language=bash]
   swift imeprograma.swift
