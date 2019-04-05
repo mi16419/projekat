@@ -6,7 +6,6 @@
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
 \usepackage[utf8]{inputenc} % make weird characters work
 \usepackage{graphicx}
-\usepackage{multirow}
 
 \usepackage[english,serbian]{babel}
 %\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
@@ -74,7 +73,7 @@
 \maketitle
 
 \abstract{
-Swift je izvarendan način da se piše softver, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće kod. To je bezbedni, brzi i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku koja spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz open source zajednice (zajednica otvorenog koda). Kompajler je optimizovan za preformanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
+Swift je izvanredan način da se piše softver, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće kod. To je bezbedni, brzi i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku koja spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog koda (eng.~{\em open source}). Kompajler je optimizovan za preformanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
 
 
 \tableofcontents
@@ -83,8 +82,8 @@ Swift je izvarendan način da se piše softver, bilo da je to za mobilne telefon
 
 \section{Uvod}
 \label{sec:uvod}
-Swift je novi programski jezik  opšte namene razvijen od strane kompanije Apple za iOS, macOS, watchOS, tvOS, Linux i z/OS. Dizajniran je da radi u Apple radnim okruženjima, Cocoa i Cocoa Touch i  postojećeg Objective-C koda pisanog za Apple proizvode. Podržava imperativni, objektno-orjantisani i funkcionalni način programiranja. Napravljen je upotrebom LLVM programskog prevodioca otvorenog koda i ukljucen je u Xcode, počev od verzije 6. Swift koristi izvršno okruženje programskog jezika Objective-C, što omogućava izvršavanje C, C++, Objective-C i Swift koda u okviru jednog programa.
-Namera kompanije Apple je bila  da Swift podrži mnoge ključne koncepte povezane sa programskim jezikom Objective-C.
+Swift je novi programski jezik opšte namene razvijen od strane kompanije Apple za iOS, macOS, watchOS, tvOS, Linux i z/OS. Dizajniran je da radi u Apple radnim okruženjima, Cocoa i Cocoa Touch i postojećeg Objective-C koda pisanog za Apple proizvode. Podržava imperativni, objektno-orjantisani i funkcionalni način programiranja. Napravljen je upotrebom LLVM programskog prevodioca otvorenog koda i ukljucen je u Xcode, počev od verzije 6 \cite{swift_sajt}. Swift koristi izvršno okruženje programskog jezika Objective-C, što omogućava izvršavanje C, C++, Objective-C i Swift koda u okviru jednog programa \cite{arc_sajt}.
+Namera kompanije Apple je bila da Swift podrži mnoge ključne koncepte povezane sa programskim jezikom Objective-C.
 
 
 
@@ -92,9 +91,9 @@ Namera kompanije Apple je bila  da Swift podrži mnoge ključne koncepte povezan
 \section{Nastanak i istorijski razvoj}
 \label{sec:prviDeo}
 
-Razvoj programskog jezika Swift je započeo 2010. godine Chris Lattner, koji je implementirao veći deo osnovne strukture jezika, za čije je postojanje znala samo nekolicina ljudi. Tek su krajem 2011. godine i drugi programeri počeli da sarađuju na projektu Swift, a u julu 2013 godine on je posato glavni fokus grupe Apple Developer Tools. 
+Razvoj programskog jezika Swift započeo je 2010. godine Chris Lattner, koji je implementirao veći deo osnovne strukture jezika, za čije je postojanje znala samo nekolicina ljudi. Tek su krajem 2011. godine i drugi programeri počeli da sarađuju na projektu Swift, a u julu 2013 godine on je postao glavni fokus grupe Apple Developer Tools \cite{mastering_swift3_sajt}. 
 
-Swift je predstavljen na međunarodnoj konferenciji programera (WWDC - Worldwide Developers Conference) 2014. godine, uz integrisano razvojno okruženje Xcode 6 i OS 8. U decembru 2015. godine Apple je zvanično izdao Swift kao projekat otvorenog koda i pokrenuo je veb sajt \url{http://swift.org}, koji je posvećen zajednici Swift. Swift skladište se nalazi na GitHub stranici kompanije Apple (\url{http://github.com/apple}). Swift razvojno skladište (\url{https://github.com/apple/swift-evolution}) prati napredak Swifta, dokumentujući predložene promene. U razvojnom skladištu se može pronaći lista predloženih promena koje su prihvaćene i onih koje su odbijene. Swift 3 sadrži nekoliko poboljšanja koje je preporučila zajednica programera. U tabeli \ref{tab:tabela1} se nalaze sve do sada izbačene verzije programskog jezika Swift, u hronološkom redosledu.
+Swift je predstavljen na međunarodnoj konferenciji programera (eng.~{\em WWDC - Worldwide Developers Conference}) 2014. godine, uz integrisano razvojno okruženje Xcode 6 i OS 8 \cite{thenewpage_sajt}. Apple je zvanično izbacio Swift u decembru 2015. godine, kao projekat otvorenog koda i pokrenuo je veb sajt \url{http://swift.org}, koji je posvećen zajednici Swift. Swift skladište nalazi  se na GitHub stranici kompanije Apple (\url{http://github.com/apple}). Swift razvojno skladište (\url{https://github.com/apple/swift-evolution}) prati napredak Swifta, dokumentujući predložene promene. U razvojnom skladištu može  se pronaći lista predloženih promena koje su prihvaćene i onih koje su odbijene. Swift 3 sadrži nekoliko poboljšanja koje je preporučila zajednica programera. U tabeli \ref{tab:tabela1} se nalaze sve do sada izbačene verzije programskog jezika Swift, u hronološkom redosledu.
 
 \begin{table}[h!]
 \begin{center}
@@ -116,41 +115,41 @@ Datum & Verzija \\ \hline
 \end{center}
 \end{table}
 
-Prvu verziju karakteriše REPL alat koji omogućava izvršavanje  manjih fragmenata Swift koda i njegovo testiranje sa komandne linije. Ova verzija je donela poboljšanja performansi kompajlera i smanjila vreme potrebno za kompajliranje Swift programa. Prilikom pokretanja projekta, kompajliraju se samo fajlovi kod kojih je detektovana izmena, što je posebno značajno kod većih projekata. Unapređeno if-let vezivanje tako da je moguće proveriti više uslova u jednom redu.
+Prvu verziju karakteriše REPL alat koji omogućava izvršavanje  manjih fragmenata Swift koda i njegovo testiranje sa komandne linije. Ova verzija je donela poboljšanja performansi kompajlera i smanjila vreme potrebno za kompajliranje Swift programa. Prilikom pokretanja projekta, kompajliraju se samo fajlovi kod kojih je detektovana izmena, što je posebno značajno kod većih projekata \cite{theswiftdev_sajt}. Unapređeno \textbf{if-let} vezivanje tako da je moguće proveriti više uslova u jednom redu.
 
 
-U drugoj verziji, kao deo novog projekta, predstvljen je Swift paket menadžer za upravljanje Swift bibliotekama. Kao priprema za naredne verzije dodata je provera verzije izvršnog okruženja. Glavne funkcionalnosti koje su ugrađene u programski jezik u drugoj verziji su:
+U drugoj verziji, kao deo novog projekta, predstvljen je Swift paket menadžer (eng.~{\em packet manager}) za upravljanje Swift bibliotekama. Kao priprema za naredne verzije dodata je provera verzije izvršnog okruženja (eng.~{\em framework}). Glavne funkcionalnosti koje su ugrađene u programski jezik u drugoj verziji su \cite{theswiftdev_sajt}:
 \begin{itemize}
-\item programiranje orjentisano na protokole,
-\item model za obradu grešaka,
-\item odlaganje izvršavanja naredbe pomoću ključne reči defer,
-\item provera da li je funkcija dostupna na trenutnoj verziji uređaja i platforme koja pokreće našu aplikaciju pomoću ključne reči available.
-\item vezivanje opcionih  vrednosti pomoću iskaza guard. 
+\item Programiranje orjentisano na protokole
+\item Model za obradu grešaka.
+\item Odlaganje izvršavanja naredbe pomoću ključne reči \textbf{ defer}.
+\item Provera da li je funkcija dostupna na trenutnoj verziji uređaja i platforme koja pokreće našu aplikaciju pomoću ključne reči \textbf{available}.
+\item Vezivanje opcionih vrednosti pomoću iskaza \textbf{guard}. 
 \end{itemize}
 
-Treća verzija sadrži osnovne promene u samom jeziku i biiblioteci Swift standarda, zbog toga nije kompatibilan sa prethodnim verzijama Swift jezika. Jedan od osnovnih ciljeva autora Swifta 3 je da on bude kompatibilan na više platformi, tako da kod koji se napiše za jednu platformu bude kompatibilan na svim drugim platformama. To znači da će kod koji se napise za MAC OS funkcionisati i na Linuxu. Tranzicija od Swift 2 je bila veoma velika i teška programerima za ispravljanje, projekti su prijavljivali gomilu gresaka koji su bile teske za ispravljanje tako da su mnogi projekti počinjani ispocetka.
+Treća verzija sadrži osnovne promene u samom jeziku i biiblioteci Swift standarda, zbog toga nije kompatibilan sa prethodnim verzijama Swift jezika. Jedan od osnovnih ciljeva bio je da on bude kompatibilan na više platformi, tako da kod koji se napiše za jednu platformu bude kompatibilan na svim drugim platformama \cite{mastering_swift3_sajt}. To znači da će kod koji se napise za MAC OS funkcionisati i na Linuxu. Tranzicija od druge verzije je bila veoma velika i teška programerima za ispravljanje, projekti su prijavljivali gomilu gresaka koje su bile teske za ispravljanje tako da su mnogi projekti počinjani ispocetka.
 
-Četvrta verzija je kompatibilna sa trećom. Nove karakteristike koje je podržala četvrta verzija su:
+Četvrta verzija je kompatibilna sa trećom. Nove karakteristike koje je podržala četvrta verzija su \cite{theswiftdev_sajt}:
 \begin{itemize}
-\item parsiranje fajlova u json i xml formatu,
-\item jednostrano definisani opsezi,
-\item kombinovanje klasa i protokola,
-\item pisanje generičkih podskripti.
+\item Parsiranje fajlova u json i xml formatu.
+\item Jednostrano definisani opsezi
+\item Kombinovanje klasa i protokola.
+\item Pisanje generičkih podskripti.
 \item Velike promene u String API-u
 \end{itemize}
 
 Dodata su sledeća poboljšanja u petoj verziji:
 \begin{itemize}
-\item karakteri u stringu imaju dodatne property-e
-\item metoda za ostatak pri deljenju koja vraća bool
-\item Unapređen rad sa vise rečnika.
+\item Karakteri u stringu imaju dodatne property-e.
+\item Metoda za ostatak pri deljenju koja vraća bool.
+\item Unapređen rad sa vise rečnika (eng.~{\em dictionary}).
 \item Dodat je novi tip result 
 \item ABI stability – rad u različitim verzijama jezika istovremeno
 \end{itemize}
   
 \subsection{Mesto u razvojnom stablu i uticaji drugih programskih jezika}
 \label{subsec:podnaslov6}
-Na razvoj Swifta uticali su mnogi programski jezici, od kojih su najznačajniji: Objective-C, Ruby, Haskell, C\#, Python. Preuzeti su određeni delovi iz različitih programskih jezika i poboljšani. Pregled preuzetih koncepata se nalaze u tabeli \ref{tab:tabela2}.
+Na razvoj Swifta uticali su mnogi programski jezici, od kojih su najznačajniji: Objective-C, Ruby, Haskell, C\#, Python \cite{chris_sajt}. Preuzeti su određeni delovi iz različitih programskih jezika i poboljšani. Pregled preuzetih koncepata se nalaze u tabeli \ref{tab:tabela2}.
 
 \begin{table}[h!]
 \begin{center}
