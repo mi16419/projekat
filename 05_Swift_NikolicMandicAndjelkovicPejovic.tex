@@ -16,9 +16,18 @@
 
 \usepackage{listings}
 
+\lstdefinelanguage{Swift}{
+  keywords={associatedtype, class, deinit, enum, extension, func, import, init, inout, internal, let, operator, private, protocol, public, static, struct, subscript, typealias, var, break, case, continue, default, defer, do, else, fallthrough, for, guard, if, in, repeat, return, switch, where, while, as, catch, dynamicType, false, is, nil, rethrows, super, self, Self, throw, throws, true, try, associativity, convenience, dynamic, didSet, final, get, infix, indirect, lazy, left, mutating, none, nonmutating, optional, override, postfix, precedence, prefix, Protocol, required, right, set, Type, unowned, weak, willSet},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
 \newcommand\todos[1]{\textcolor{red}{#1}}
 
-%\newtheorem{primer}{Пример}[section] %ćirilični primer
 \newtheorem{primer}{Primer}[section]
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
@@ -31,15 +40,15 @@
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{mygreen},    % comment style
+  commentstyle=\color{blue},    % comment style
   deletekeywords={...},            % if you want to delete keywords from the given language
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   firstnumber=1000,                % start line enumeration with line 1000
   frame=single,	                   % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-  keywordstyle=\color{blue},       % keyword style
-  language=Python,                 % the language of the code
+  keywordstyle=\color{mygreen},       % keyword style
+  language=Swift,                 % the language of the code
   morekeywords={*,...},            % if you want to add more keywords to the set
   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
@@ -65,7 +74,7 @@
 \maketitle
 
 \abstract{
-Swift je izvarendan način da se piše softver, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće kod. To je bezbedni, brzi i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku koja spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz open source zajednice ( zajednica otvorenog koda). Kompajler je optimizovan za preformanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
+Swift je izvarendan način da se piše softver, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće kod. To je bezbedni, brzi i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku koja spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz open source zajednice (zajednica otvorenog koda). Kompajler je optimizovan za preformanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
 
 
 \tableofcontents
@@ -224,7 +233,7 @@ programiranje. Sadrži sve osnovne koncepte objektno orijentisanog programiranja
 \section{Okruženja i njihove karakteristike}	
 \label{sec:cetvrtiDeo}
 
-Programski jezik Swift se može pisati u različitim okruženjima. Najpoznatije okruženje je \textbf{XCode}, a pored njega, koriste se i AppCode, Atom, CLion,SublimeText.
+Programski jezik Swift se može pisati u različitim okruženjima. Najpoznatije okruženje je \textbf{XCode}, a pored njega, koriste se i AppCode, Atom, CLion, SublimeText.
 
 \subsection{XCode}
 \label{subsec:podnaslovXCode}
@@ -294,7 +303,7 @@ Za instalaciju jezika Swift na Windowsu potrebno je prvo da ga preuzmemo sa ovog
 
 Nakon instalacije okruženja, napisaćemo jednostavan program koji ćemo kasnije pokrenuti pomoću Windows komandne linije. Prvo je potrebno da otvorimo novi Notepad++ fajl, i u njega unosimo komandu za ispis.
 
-\begin{lstlisting}[caption={},frame=single, label=simple]
+\begin{lstlisting}[language=Swift]
 print("Hello world!")
 \end{lstlisting}
 \vspace{3mm}
@@ -361,20 +370,23 @@ Na kraju, da bismo kompilirali i pokrenuli prethodno napisan program potrebno je
 \label{sec:sestiDeo}
 
 U narednim primerima biće prikazane i objašnjene osnovne funkcionalnosti jezika Swift.
+\begin{primer}
 
-\begin{lstlisting}[caption={},frame=single, label=simple]
+Ispis teksta se vrši pomoću funkcije print(). Tačka-zarez su opcioni na kraju svakog reda.
+\end{primer}
+
+\begin{lstlisting}[language=Swift, caption={Ispis teksta},frame=single, label=simple]
 
 print("Hello world!")
 print("Hello world!");
 
 \end{lstlisting}
 
-Ispis teksta se vrši pomoću funkcije print(). Tačka-zarez su opcioni na kraju svakog reda.\\
-
-
-
-\begin{lstlisting}[caption={},frame=single, label=simple]
-
+\begin{primer}
+Nije strogo tipiziran (deklarišemo promenljive pomocu - var), a dodeljujemo vrednost pomoću operatora dodele. Zagrade kod provere uslova su opcione. Preporučujemo da se zagrade ne koriste, osim u slučaju kada imate više uslovnih iskaza u istoj liniji.
+Velike (vitičaste) zagrade moraju se koristiti kod if-grane i petlji, u suprotnom će doći do greške. I za uslovne iskaze (if i while) i za iskaze dodele (=) razmaci su opcioni.
+\end{primer}
+\begin{lstlisting}[language=Swift, caption={Dodeljivanje vrednosti i provera uslova},frame=single, label=simple]
 var x = 5
 var y = 3
 
@@ -388,17 +400,13 @@ if (x==3) {
 
 if (x == 5)				//Syntax error
 	print("x je 5");
-
 \end{lstlisting}
 
-Nije strogo tipiziran (deklarišemo promenljive pomocu - var), a dodeljujemo vrednost pomoću operatora dodele.\\
-Zagrade kod provere uslova su opcione. Preporučujemo da se zagrade ne koriste, osim u slučaju kada imate više uslovnih iskaza u istoj liniji.\\
-Velike (vitičaste) zagrade moraju se koristiti kod if-grane i petlji, u suprotnom će doći do greške.\\
-I za uslovne iskaze (if i while) i za iskaze dodele (=) razmaci su opcioni.\\
+\begin{primer}
+Stringovi se takodje dodeljuju pomoću operatora dodele. Konkatenacija stringova se vrši pomoću specijalnih karaktera '$\backslash$ (string)' ili jednostavnim navodjenjem u naredbi 'print', gde se stringovi razdvajaju zarezima.
+\end{primer}
 
-
-
-\begin{lstlisting}[caption={},frame=single, label=simple]
+\begin{lstlisting}[language=Swift, caption={Stringovi i konkatenacija stringova},frame=single, label=simple]
 
 var ime = "Swift"
 var jezik = "programski jezik"
@@ -411,12 +419,10 @@ print(poruka1)
 
 \end{lstlisting}
 
-Stringovi se takodje dodeljuju pomoću operatora dodele.\\
-Konkatenacija stringova se vrši pomoću specijalnih karaktera '$\backslash$ (string)' ili jednostavnim navodjenjem u naredbi 'print', gde se stringovi razdvajaju zarezima.\\
-
-
-
-\begin{lstlisting}[caption={},frame=single, label=simple]
+\begin{primer}
+Listu stringova koji su razdvojeni određenim separatorom, pravimo pomoću naredbe print, gde se prvo navode stringovi koji čine tu listu, a nakon toga separator i terminator. Možemo koristiti jos jedan parametar u funkciji print(), pod nazivom toStream. Pomoću njega preusmeravamo ispis funkcije print(). Konkretno u ovom primeru preusmeravamo ispis u promenljivu ime4.
+\end{primer}
+\begin{lstlisting}[language=Swift, caption={Lista stringova},frame=single, label=simple]
 
 var ime1 = "Swift"
 var ime2 = "Java"
@@ -428,11 +434,11 @@ print(ime1,ime2,ime3,separator:", ", terminator:"", to:&ime4)
 
 \end{lstlisting}
 
-Listu stringova koji su razdvojeni određenim separatorom, pravimo pomoću naredbe print, gde se prvo navode stringovi koji čine tu listu, a nakon toga separator i terminator.\\
-Možemo koristiti jos jedan parametar u funkciji print(), pod nazivom toStream. Pomoću njega preusmeravamo ispis funkcije print(). Konkretno u ovom primeru preusmeravamo ispis u promenljivu ime4.\\
+\begin{primer}
+U ovom primeru je pokazana funkcionalnost for i while petlje. Takodje jos jednom i mogućnost konkatenacije pomoću operatora +. Nakon for petlje u konzoli će biti ispisani brojevi od 0 do 10. U while petlji će se svakog puta dodavati po jedno slovo a, i tako 5 puta.
+\end{primer}
 
-
-\begin{lstlisting}[caption={},frame=single, label=simple]
+\begin{lstlisting}[language=Swift, caption={Petlje},frame=single, label=simple]
 
 var x:Int = 0
 for x in 0...10 {
@@ -447,10 +453,11 @@ while y != "aaaaa" {
 
 \end{lstlisting}
 
-U ovom primeru je pokazana funkcionalnost for i while petlje. Takodje jos jednom i mogućnost konkatenacije pomoću operatora +. Nakon for petlje u konzoli će biti ispisani brojevi od 0 do 10. U while petlji će se svakog puta dodavati po jedno slovo a, i tako 5 puta.
+\begin{primer}
+Pozivanje funkcije sa parametrima koja nema povratnu vrednost. Nakon dva poziva, u kojima moramo proslediti dva argumenta funcije, bice ispisana dva broja (90-score i 4.31-currency).
+\end{primer}
 
-
-\begin{lstlisting}[caption={},frame=single, label=simple]
+\begin{lstlisting}[language=Swift, caption={Funkcije bez povratne vrednosti},frame=single, label=simple]
 
 var score:Int = 0
 var currency:Float = 0
@@ -468,10 +475,11 @@ print(currency)
 
 \end{lstlisting}
 
-Pozivanje funkcije sa parametrima koja nema povratnu vrednost. Nakon dva poziva, u kojima moramo proslediti dva argumenta funcije, bice ispisana dva broja (90-score i 4.31-currency).\\
+\begin{primer}
+Pozivanje funkcije koja ima povratnu vrednost. Nakon poziva povratna vrednost funkcije u ovom slučaju je true, koju ujedno dobija i promenljiva y.
+\end{primer}
 
-
-\begin{lstlisting}[caption={},frame=single, label=simple]
+\begin{lstlisting}[language=Swift, caption={Funkcije sa povratnom vrednosti},frame=single, label=simple]
 
 var x:Int = 1
 
@@ -486,8 +494,6 @@ func function() -> Bool {
 var y:Bool = function()
 
 \end{lstlisting}
-
-Pozivanje funkcije koja ima povratnu vrednost. Nakon poziva povratna vrednost funkcije u ovom slučaju je true, koju ujedno dobija i promenljiva y.\\
 
 
 
