@@ -125,7 +125,7 @@ Prvu verziju karakteriše REPL alat koji omogućava izvršavanje  manjih fragmen
 
 U drugoj verziji, kao deo novog projekta, predstvljen je Swift paket menadžer (eng.~{\em packet manager}) za upravljanje Swift bibliotekama. Kao priprema za naredne verzije dodata je provera verzije izvršnog okruženja (eng.~{\em framework}). 
 
-Treća verzija sadrži osnovne promene u samom jeziku i biblioteci Swift standarda, zbog toga nije kompatibilan sa prethodnim verzijama Swift jezika. Jedan od osnovnih ciljeva bio je da on bude kompatibilan na više platformi, to znači da će kod koji se napše za MAC OS funkcionisati i na Linuxu. Tranzicija od druge verzije je bila veoma velika i teška programerima za ispravljanje, projekti su prijavljivali gomilu grešaka tako da su mnogi projekti počinjani ispočetka. 
+Treća verzija sadrži osnovne promene u samom jeziku i biblioteci Swift standarda, zbog toga nije kompatibilan sa prethodnim verzijama jezika. Jedan od osnovnih ciljeva bio je da bude kompatibilan na više platformi, to znači da će kod koji se napše za MAC OS funkcionisati i na Linuxu. Tranzicija od druge verzije je bila veoma velika i teška programerima za ispravljanje, projekti su prijavljivali gomilu grešaka tako da su mnogi projekti počinjani ispočetka. 
 
 Nakon treće verzije, jezgro programskog jezika Swift nije se drastično menjalo, stoga su četvrta i peta verzija kompatibilne sa trećom. U narednim verzijama radilo se na poboljšanjima implementacije pojedinih koncepata jezika. Poslednja verzija koja je izbačena je verzija 5.0.
   
@@ -202,7 +202,7 @@ dobre osobine. Najvažnije osobine programskog jezika Swift, koje ga čine izuze
 \item\textbf{Jasan} - lako se čita i lako piše, ima minimalne sintaksne ukrase i samo nekoliko skrivenih prečica. Njegova sintaksa je jasna, dosledna i očigledna.
 \item\textbf{Bezbedan} - zahteva jake tipove kako bi obezbedio da u svakom trenutku i on i programer znaju na šta se sve tipovi objekata pozivaju.
 \item\textbf{Ekonomičan} - mali jezik koji nudi samo neke osnovne tipove podataka i funkcionalnosti. Preostalo mora da bude dato kodom programera ili bibliotekama (razvojno okruženje Cocoa).
-\item\textbf{Upravlja memorijom} - automatski upravlja memorijom i programer ne treba o tome da brine.
+\item\textbf{Upravlja memorijom} - automatski upravlja memorijom, programer ne treba o tome da brine.
 \item\textbf{Kompatibilnost sa razvojnim okruženjem Cocoa} -  Swift je napravljen tako da koristi većinu API interfejsa razvojnog okruženja Cocoa.
 \end{itemize}
 
@@ -268,21 +268,13 @@ Programski jezik Swift se može pisati u različitim okruženjima. Najpoznatije 
 
 \subsection{Xcode}
 \label{subsec:podnaslovXcode}
-Xcode (slika \ref{fig:xcode}) je integrisano razvojno okruženje koje je napravila kompanija Apple. Koristi se za razvoj iOS i macOS aplikacija. U ovom okruženju mogu se pisati kodovi u mnogim programskim jezicima, kao što su C, C++, Objective-C, Java, AppleScript, Python, Ruby i Swift. Xcode sadrži i okvire, za programski jezik Swift su najvažniji \textbf{Playground} i \textbf{Cocoa Touch}. 
+Xcode  je integrisano razvojno okruženje koje je napravila kompanija Apple. Koristi se za razvoj iOS i macOS aplikacija. U ovom okruženju mogu se pisati kodovi u mnogim programskim jezicima, kao što su C, C++, Objective-C, Java, AppleScript, Python, Ruby i Swift. Xcode sadrži i okvire, za programski jezik Swift su najvažniji \textbf{Playground} i \textbf{Cocoa Touch}. 
 Postoji 9 verzija ovog okruženja, a od verzije 6, obuhvata i programski jezik Swift.
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.2]{xcode.jpg}
-\end{center}
-\caption{Okruženje Xcode}
-\label{fig:xcode}
-\end{figure}
 
 
 \subsection{Playground}
 \label{subsec:podnaslovPlayground}
-Playground (slika \ref{fig:playground}) je interaktivno radno okruženje koje omogućava da pišemo kod i odmah vidimo rezultate čim su promene izvršene u kodu. Kako bismo mogli da koristimo ovaj okvir potrebno je prvo da pokrenemo Xcode i zatim izaberemo opciju Get started with a playground.
+Playground  je interaktivno radno okruženje koje omogućava da pišemo kod i odmah vidimo rezultate čim su promene izvršene u kodu. Kako bismo mogli da koristimo ovaj okvir potrebno je prvo da pokrenemo Xcode i zatim izaberemo opciju Get started with a playground.
 Sastoji se od nekoliko delova, među kojima su najvažniji: 
 \begin{itemize}
 \item Prostor za kodiranje.
@@ -290,39 +282,17 @@ Sastoji se od nekoliko delova, među kojima su najvažniji:
 \item Prostor za ispravljanje grešaka.
 \end{itemize}
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.2]{playground.jpg}
-\end{center}
-\caption{Playground}
-\label{fig:playground}
-\end{figure}
-
 
 \subsection{SublimeText}
 \label{subsec:podnaslovSublimeText}
 
-Sublime Text (slika \ref{fig:sublime}) je verovatno jedan od najrasprostranjenijih okruženja. Poseduje dobar korisnički interfejs i sjajne performanse. On u osnovni podržava mnoge programske jezike a nove funkcionalnosti mogu biti dodate korišćenjem dodataka (plugina), koji je zajednica razvijala pod licencom slobodnog softvera. Vrlo lako ga možemo prilagoditi za razvoj Swift aplikacija dodatkom podrške za Swift pakete.
+Sublime Text  je verovatno jedan od najrasprostranjenijih okruženja. Poseduje dobar korisnički interfejs i sjajne performanse. On u osnovni podržava mnoge programske jezike a nove funkcionalnosti mogu biti dodate korišćenjem dodataka (plugina), koji je zajednica razvijala pod licencom slobodnog softvera. Vrlo lako ga možemo prilagoditi za razvoj Swift aplikacija dodatkom podrške za Swift pakete.
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.25]{sublime.png}
-\end{center}
-\caption{Sublime}
-\label{fig:sublime}
-\end{figure}
 
 \subsection{Atom}
 \label{subsec:podnaslovAtom}
-Atom (slika \ref{fig:atom}) je razvijen od strane GitHub-a, visoko modularno okruženje koje omogućava laku instalaciju novih paketa što ga je svrstalo među najpoželjnija okruženja. Dodavanje podrške za Swift programiranje je jednostavno instaliranjem language-swift paketa.
+Atom je razvijen od strane GitHub-a, visoko modularno okruženje koje omogućava laku instalaciju novih paketa što ga je svrstalo među najpoželjnija okruženja. Dodavanje podrške za Swift programiranje je jednostavno instaliranjem language-swift paketa.
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.2]{atom.jpg}
-\end{center}
-\caption{atom}
-\label{fig:atom}
-\end{figure}
 
 
 \section{Instalacija i uputstvo za pokretanje}	
@@ -429,29 +399,6 @@ print("Hello world!");
 
 \end{lstlisting}
 
-\begin{primer}
-Nije strogo tipiziran (deklarišemo promenljive pomocu - var), a dodeljujemo vrednost pomoću operatora dodele. Zagrade kod provere uslova su opcione. Preporučujemo da se zagrade ne koriste, osim u slučaju kada imate više uslovnih iskaza u istoj liniji.
-Velike (vitičaste) zagrade moraju se koristiti kod if-grane i petlji, u suprotnom će doći do greške. I za uslovne iskaze (if i while) i za iskaze dodele (=) razmaci su opcioni.
-\end{primer}
-\begin{lstlisting}[language=Swift, caption={Dodeljivanje vrednosti i provera uslova},frame=single, label=simple]
-var x = 5
-var y = 3
-
-if x == 5 {
-	print("x je 5");
-}
-
-if (x==3) {
-	print("x je 5");
-}
-
-if (x == 5)				//Syntax error
-	print("x je 5");
-\end{lstlisting}
-
-\begin{primer}
-Stringovi se takođe dodeljuju pomoću operatora dodele. Konkatenacija stringova se vrši pomoću specijalnih karaktera '$\backslash$ (string)' ili jednostavnim navođenjem u naredbi 'print', gde se stringovi razdvajaju zarezima.
-\end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Stringovi i konkatenacija stringova},frame=single, label=simple]
 
@@ -552,8 +499,8 @@ print(statistika.2)
 Swift je veoma pristupačan novim programerima, to je industrijski kvalitetan programski jezik koji je veoma detaljan i pogodan kao skriptni jezik. Swift se dobro štiti od najzastupljenih programskih grešaka usvajanjem modernih paterna programiranja:
 \begin{itemize}
 \item Promenjive su uvek inicijalizovane pre upotrebe.
-\item Nizovi su provereni za out of bounds greškom.
-\item Integer-i su provereni za overflow.
+\item Obrađena je greška za pristupanje nepostojećeg elementa niza (eng.~{\em out of bounds}).
+\item Integer-i su provereni za prekoračenje memorije (eng.~{\em overflow}).
 \item Opcione promenjive zahtevaju eksplicitno rukovanje.
 \item Memorijom se upravlja automatski.
 \item Rukovanje greškama omogućava kontrolisani oporavak od neočekivanih prekida (crash).
@@ -563,7 +510,7 @@ Swift kod je kompajliran i optimizovan da izvuče najviše iz modernog hardvera.
 
 \section{Zaključak}
 \label{sec:zakljucak}
-Swift je mlad jezik, koji iz godine u godinu napreduje i postaje popularniji u iOS programiranju. Očekuje se njegova ekspanzija u narednom periodu, pre svega zbog sve većeg korišćenja iOS aplikacija, a ovaj programski jezik je o tome najbolji. Godinama se radilo na Swift-u i on nastavlja da evoluira sa novim funkcionalnostima, a cilj koji ima je veoma ambiciozan. Ovaj seminarski rad ima za cilj da uvede čitaoca u ovaj jezik, a takodje, i da ga motiviše da nastavi sa učenjem i usavršavanjem ovog jezika. 
+Swift je mlad jezik, koji iz godine u godinu napreduje i postaje popularniji u iOS programiranju. Očekuje se njegova ekspanzija u narednom periodu, pre svega zbog sve većeg korišćenja iOS aplikacija. Godinama se radilo na Swift-u i on nastavlja da evoluira sa novim funkcionalnostima, a cilj koji ima je veoma ambiciozan. Ovaj seminarski rad ima za cilj da uvede čitaoca u ovaj jezik, a takodje, i da ga motiviše da nastavi sa učenjem i usavršavanjem ovog jezika. 
 
 \addcontentsline{toc}{section}{Literatura}
 \appendix
