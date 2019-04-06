@@ -179,16 +179,12 @@ Neka od mogućnosti koje pruža pomoću svojih funkcija \cite{mastering_swift3}
 vrednosti. 
 \item Generički tipovi - generički tipovi omogućavaju da se piše kod jednom za izvršenje identičnih
 zadataka za različite tipove objekata dok se zadržava bezbednost tipa. 
-\item Promenljivost kolekcije - Swift nema posebne objekte za promenljive ili nepromenljive kontejnere. Umesto
-toga, možete da definišete promenljivost definisanjem kontejnera kao konstante
-ili kao promenljive.
 \item Sintaksa zatvorenog izraza - zatvoreni izrazi su samostalni blokovi funkcionalnosti koji mogu da se proslede i upotrebe u kodu.
 \item Pseudoklase - pseudoklasa definiše promenljivu koja možda nema vrednost.
 \item Switch iskaz - Switch iskaz je drastično poboljšan funkcijama, kao što su poklapanje šablona i
 zaštitni uslovi; zahvaljujući njima, izbegnute su automatske greške.
 \item Višestruki povratni tipovi - funkcije mogu da imaju višestruke povratne tipove upotrebom torki. 
 \item Preklapanje operatora - klase mogu da obezbede sopstvenu implementaciju postojećih operatora. 
-\item Nabrajanja sa pratećim vrednostima - u Swiftu može da se uradi mnogo više od jednostavnog definisanja grupe srodnih vrednosti pomoću nabrajanja.
 \end{itemize}
 
 Postoji još jedna funkcija, koja tehnički nije
@@ -199,7 +195,7 @@ funkcija Swifta, već Xcode-a i kompajlera. To je \textbf{Mix and match}. Ona om
 
 Swift je objektno orijentisan programski jezik, koji je Apple razvio sa ciljem da 
 se poboljšaju određeni delovi jezika Objective-C, ali da se i iskoriste njegove
-dobre osobine. Kao što smo već rekli u jezik Swift su uključene i osobine i mnogih drugih jezika. Najvažnije osobine programskog jezika Swift, koje ga čine izuzetnim za učenje iOS programiranja su \cite{swift_programming}:
+dobre osobine. Najvažnije osobine programskog jezika Swift, koje ga čine izuzetnim za učenje iOS programiranja su \cite{swift_programming}:
 \begin{itemize}
 \item\textbf{Objektno orijentisan} - moderan objektno orijentisan jezik.
 \item\textbf{Funkcionalan} - sadrži osobine zbog kojih je pogodan za pisanje funkcionalnih programa.
@@ -207,26 +203,26 @@ dobre osobine. Kao što smo već rekli u jezik Swift su uključene i osobine i m
 \item\textbf{Bezbedan} - zahteva jake tipove kako bi obezbedio da u svakom trenutku i on i programer znaju na šta se sve tipovi objekata pozivaju.
 \item\textbf{Ekonomičan} - mali jezik koji nudi samo neke osnovne tipove podataka i funkcionalnosti. Preostalo mora da bude dato kodom programera ili bibliotekama (razvojno okruženje Cocoa).
 \item\textbf{Upravlja memorijom} - automatski upravlja memorijom i programer ne treba o tome da brine.
-\item\textbf{Kompatibilnost sa razvojnim okruženjem Cocoa} - porgramski interfejsi aplikacije (API) razvojnog okruženja Cocoa napisani su u jezicima C i Objective-C. Swift je napravljen tako da koristi većinu API interfejsa razvojnog okruženja Cocoa.
+\item\textbf{Kompatibilnost sa razvojnim okruženjem Cocoa} -  Swift je napravljen tako da koristi većinu API interfejsa razvojnog okruženja Cocoa.
 \end{itemize}
 
 Zbog svih ovih osobina, 2016. godine, programski jezik Swift je bio najplaćeniji jezik u Americi. Na sledećem grafikonu (slika \ref{fig:grafikon}) prikazano je 10 najplaćenijih programskih jezika:
 
-\begin{figure}
+\begin{figure}[hbt!]
 
 \begin{tikzpicture}
-\pgfplotsset{width=10 cm}
+\pgfplotsset{width=10 cm, height = 5cm}
 \begin{axis} [
 symbolic x coords={C++, Python, PHP, Ruby, Swift, C, JavaScript, SQL, Java},
 xtick={C++, Python, PHP, Ruby, Swift, C, JavaScript, SQL, Java},
 x tick label style={rotate=45, anchor=east, align=center},
 axis lines*=left,
 ymajorgrids = true,
-ylabel=\textbf{Zarada u hiljadama},
+ylabel=Zarada u hiljadama,
 legend style={at={(0.5,-0.10)},
     anchor=north,legend columns=1},
     ymin=80,
-    ytick={80,85,...,120},
+    ytick={80,90,...,120},
     ymax=120,
     bar width=5mm,
     ybar=-0.5cm, 
@@ -569,9 +565,11 @@ Swift kod je kompajliran i optimizovan da izvuče najviše iz modernog hardvera.
 \label{sec:zakljucak}
 Swift je mlad jezik, koji iz godine u godinu napreduje i postaje popularniji u iOS programiranju. Očekuje se njegova ekspanzija u narednom periodu, pre svega zbog sve većeg korišćenja iOS aplikacija, a ovaj programski jezik je o tome najbolji. Godinama se radilo na Swift-u i on nastavlja da evoluira sa novim funkcionalnostima, a cilj koji ima je veoma ambiciozan. Ovaj seminarski rad ima za cilj da uvede čitaoca u ovaj jezik, a takodje, i da ga motiviše da nastavi sa učenjem i usavršavanjem ovog jezika. 
 
-
 \addcontentsline{toc}{section}{Literatura}
 \appendix
 \bibliography{seminarski} 
+\bibliographystyle{plain}
+
+\appendix
 
 \end{document}
