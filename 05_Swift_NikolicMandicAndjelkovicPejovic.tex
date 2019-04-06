@@ -151,7 +151,9 @@ Dodata su sledeća poboljšanja u petoj verziji:
 \label{subsec:podnaslov6}
 Na razvoj Swifta uticali su mnogi programski jezici, od kojih su najznačajniji: Objective-C, Rust, Haskell, Ruby, Python, C\#, CLU \cite{chris_sajt}. Preuzeti su određeni delovi iz različitih programskih jezika i poboljšani.
 
- Pregled preuzetih koncepata se nalaze u tabeli \ref{tab:tabela2}.
+Pregled preuzetih koncepata se nalaze u tabeli \ref{tab:tabela2}.
+
+\newpage
 
 \begin{table}[h!]
 \begin{center}
@@ -170,6 +172,16 @@ C\# i Objective-C & Signed i unsigned int \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
+
+Mesto programskog jezika Swfit u razvojnom stablu je predstavljeno na slici \ref{fig:razvojno_stablo}.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.7]{razvojno_stablo.jpg}
+\end{center}
+\caption{Razvojno stablo}
+\label{fig:razvojno_stablo}
+\end{figure}
 
 
 \section{Osnovna namena, svrha i mogućnosti}	
@@ -236,18 +248,21 @@ Programski jezik Swift se može pisati u različitim okruženjima. Najpoznatije 
 
 \subsection{Xcode}
 \label{subsec:podnaslovXcode}
-Xcode je integrisano razvojno okruženje koje je napravila kompanija Apple. Koristi se za razvoj iOS i macOS aplikacija. U ovom okruženju mogu se pisati kodovi u mnogim programskim jezicima, kao sto su C, C++, Objective-C, Java, AppleScript, Python, Ruby i Swift. Xcode sadrži i okvire, za programski jezik Swift su najvažniji \textbf{Playground} i \textbf{Cocoa Touch}. 
-Postoji 9 verzija ovog okruženja, a od verzije 6, obuhvata i programski jezik Swift
+Xcode(slika \ref{fig:xcode}) je integrisano razvojno okruženje koje je napravila kompanija Apple. Koristi se za razvoj iOS i macOS aplikacija. U ovom okruženju mogu se pisati kodovi u mnogim programskim jezicima, kao sto su C, C++, Objective-C, Java, AppleScript, Python, Ruby i Swift. Xcode sadrži i okvire, za programski jezik Swift su najvažniji \textbf{Playground} i \textbf{Cocoa Touch}. 
+Postoji 9 verzija ovog okruženja, a od verzije 6, obuhvata i programski jezik Swift.
 
-
+\begin{figure}[h!]
+\begin{center}
 \includegraphics[scale=0.2]{xcode.jpg}
+\end{center}
+\caption{Okruženje Xcode}
+\label{fig:xcode}
+\end{figure}
 
 
 \subsection{Playground}
 \label{subsec:podnaslovPlayground}
-Playground je interaktivno radno okruženje koje omogućava da pišemo kod i odmah vidimo
-rezultate čim su promene izvršene u kodu. Kako bismo mogli da koristimo ovaj okvir potrebno je prvo
-da pokrenemo Xcode i zatim izaberemo opciju Get started with a playground.
+Playground(slika \ref{fig:playground}) je interaktivno radno okruženje koje omogućava da pišemo kod i odmah vidimo rezultate čim su promene izvršene u kodu. Kako bismo mogli da koristimo ovaj okvir potrebno je prvo da pokrenemo Xcode i zatim izaberemo opciju Get started with a playground.
 Sastoji se od nekoliko delova, među kojima su najvažniji: 
 \begin{itemize}
 \item Prostor za kodiranje.
@@ -255,22 +270,40 @@ Sastoji se od nekoliko delova, među kojima su najvažniji:
 \item Prostor za ispravljanje grešaka.
 \end{itemize}
 
-
+\begin{figure}[h!]
+\begin{center}
 \includegraphics[scale=0.2]{playground.jpg}
+\end{center}
+\caption{Playground}
+\label{fig:playground}
+\end{figure}
+
 
 \subsection{SublimeText}
 \label{subsec:podnaslovSublimeText}
 
-Sublime Text je verovatno jedan od najrasprostranjenijih okruženja. Poseduje dobar korisnički interfejs i sjajne performanse. On u osnovni podržava mnoge programske jezike a nove funkcionalnosti mogu biti dodate korišćenjem dodataka (plugina), koji je zajednica razvijala pod licencom slobodnog softvera. Vrlo lako ga mozemo prilagoditi za razvoj Swift aplikacija dodatkom podrške za Swift pakete.
+Sublime Text(slika \ref{fig:sublime}) je verovatno jedan od najrasprostranjenijih okruženja. Poseduje dobar korisnički interfejs i sjajne performanse. On u osnovni podržava mnoge programske jezike a nove funkcionalnosti mogu biti dodate korišćenjem dodataka (plugina), koji je zajednica razvijala pod licencom slobodnog softvera. Vrlo lako ga mozemo prilagoditi za razvoj Swift aplikacija dodatkom podrške za Swift pakete.
 
-
+\begin{figure}[h!]
+\begin{center}
 \includegraphics[scale=0.25]{sublime.png}
+\end{center}
+\caption{Sublime}
+\label{fig:sublime}
+\end{figure}
 
 \subsection{Atom}
 \label{subsec:podnaslovAtom}
-Razvijen je od strane GitHub-a, visoko modularno okruŽenje koje omoguĆava laku instalaciju novih paketa Što ga je svrstalo među najpoželjnija okruženja. Dodavanje podrške za Swift programiranje je jednostavno instaliranjem language-swift paketa.
+Atom(slika \ref{fig:atom}) je razvijen od strane GitHub-a, visoko modularno okruženje koje omogućava laku instalaciju novih paketa što ga je svrstalo među najpoželjnija okruženja. Dodavanje podrške za Swift programiranje je jednostavno instaliranjem language-swift paketa.
 
+\begin{figure}[h!]
+\begin{center}
 \includegraphics[scale=0.2]{atom.jpg}
+\end{center}
+\caption{atom}
+\label{fig:atom}
+\end{figure}
+
 
 \section{Instalacija i uputstvo za pokretanje}	
 \label{sec:petiDeo}
@@ -280,9 +313,15 @@ Programski jezik Swift se može koristiti na različitim operativnim sistemima. 
 \subsection{Swift na Windowsu}
 \label{subsec:podnaslovWindows}
 
-Za instalaciju jezika Swift na Windowsu potrebno je prvo da ga preuzmemo sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga nam se pojavljuje prozor za instalaciju, gde pratimo dalja uputstva i tako instaliramo Swift i kompajler za ovaj jezik. Nakon završetka instalacije, potreban nam je editor teksta u kojem želimo da kodiramo. Možemo koristiti bilo koje od gore navedenih razvojnih okruženja u kojim nam je udobno da radimo. U ovom primeru koristićemo \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}, koji je jednostavan, besplatan i lak za instalaciju.
+Za instalaciju jezika Swift na Windowsu potrebno je prvo da ga preuzmemo sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga nam se pojavljuje prozor za instalaciju, gde pratimo dalja uputstva i tako instaliramo Swift i kompajler za ovaj jezik. Nakon završetka instalacije, potreban nam je editor teksta u kojem želimo da kodiramo. Možemo koristiti bilo koje od gore navedenih razvojnih okruženja u kojim nam je udobno da radimo. U ovom primeru koristićemo \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}(slika \ref{fig:notpad}), koji je jednostavan, besplatan i lak za instalaciju.
 
-\includegraphics[scale=0.5]{notepadpp.png}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.35]{notepadpp.png}
+\end{center}
+\caption{Notpad}
+\label{fig:notpad}
+\end{figure}
 
 Nakon instalacije okruženja, napisaćemo jednostavan program koji ćemo kasnije pokrenuti pomoću Windows komandne linije. Prvo je potrebno da otvorimo novi Notepad++ fajl, i u njega unosimo komandu za ispis.
 
@@ -292,9 +331,15 @@ print("Hello world!")
 
 Da bi sačuvali ovaj kod, koristićemo File > Save As i izabrati Swift file iz Save As Type menija. Ako u meniju nedostaje tip ovog fajla izabraćemo all files, i dodati .swift fajl ekstenziju nakon što dali odgovarajuće ime fajlu.
 
-Sada kada imamo program, želimo da ga kompiliramo i pokrenemo. Za kompiliranje i pokretanje koristimo korisnički interfejs Swift-a koji bi trebalo ovako da izgleda:\\
+Sada kada imamo program, želimo da ga kompiliramo i pokrenemo. Za kompiliranje i pokretanje koristimo korisnički interfejs Swift-a koji je prikazan na slici \ref{fig:windows}.
 
-\includegraphics[scale=0.4]{swift-win.png}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.35]{swift-win.png}
+\end{center}
+\caption{Korisničko okruženje za Windows}
+\label{fig:windows}
+\end{figure}
 
 
 Nakon pritiska na Select File izabraćemo naš program koji smo prethodno napisali i pritisnuti Compile. Nakon što sačekamo da se kompilacije završi dobićemo poruku “Successfully compiled”.
@@ -436,50 +481,49 @@ while y != "aaaaa" {
 \end{lstlisting}
 
 \begin{primer}
-Pozivanje funkcije sa parametrima koja nema povratnu vrednost. Nakon dva poziva, u kojima moramo proslediti dva argumenta funcije, bice ispisana dva broja (90-score i 4.31-currency).
+Pozivanje funkcije sa parametrima koja nema povratnu vrednost. Sintaksa za deklaraciju funkcija se sastoji iz ključne reči func, naziva i liste parametara. Parametri su oblika naziv ':' tip promenljive.
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Funkcije bez povratne vrednosti},frame=single, label=simple]
 
-var score:Int = 0
-var currency:Float = 0
+var skor:Int = 0
+var trenutno_stanje:Float = 0
 
-func addToScore(points:Int, money:Float){
-	score = score + points
-	currency = currency + money
+func dodaj_poene_i_novac(poeni:Int, novac:Float){
+	skor = skor + poeni
+	trenutno_stanje = trenutno_stanje + novac
 }
 
-addToScore(points: 30, money: 1.45)
-addToScore(points: 60, money: 2.86)
+dodaj_poene_i_novac(points: 30, novac: 1.45)
+dodaj_poene_i_novac(points: 60, novac: 2.86)
 
-print(score)
-print(currency)
+print(skor)
+print(trenutno_stanje)
 
 \end{lstlisting}
 
 \begin{primer}
-Pozivanje funkcije koja ima povratnu vrednost. Nakon poziva povratna vrednost funkcije u ovom slučaju je true, koju ujedno dobija i promenljiva y.
+Funkcije u programskom jeziku Swift dozvoljavaju da vraćamo jednu ili više vrednosti istovremeno. Sintaksa za povratnu vrednost je 'return(niz vrednosti koje želimo da vratimo)'.
 \end{primer}
 
-\begin{lstlisting}[language=Swift, caption={Funkcije sa povratnom vrednosti},frame=single, label=simple]
+\begin{lstlisting}[language=Swift, caption={Funkcije koje imaju povratnu vrednost},frame=single, label=simple]
 
-var x:Int = 1
-
-func function() -> Bool {
-	if(x == 0){
-		return false
-	} else {
-		return true
-	}
+func izracunajMinMaxSuma(a: Int, b: Int) -> (min: Int, max: Int, suma: Int) {
+    
+    if a > b {
+        return (b, a, a + b)
+    } else {
+        return (a, b, a + b)
+    }
 }
-
-var y:Bool = function()
+ 
+let statistika = izracunajMinMaxSuma(5, b: 19)
+let (min2, max2, suma2) = izracunajMinMaxSuma(5, b: 19)
+print(suma2)            
+print(statistika.sum)   
+print(statistika.2)     
 
 \end{lstlisting}
-
-
-
-
 
 
 \section{Specifičnosti}	
@@ -499,7 +543,7 @@ Swift kod je kompajliran i optimizovan da izvuče najviše iz modernog hardvera.
 
 \section{Zaključak}
 \label{sec:zakljucak}
-Godinama se radilo na Swift-u i on nastavlja da evoluira  sa novim funkcionalnostima a cilj koji ima je veoma ambiciozan.
+Swift je mlad jezik, koji iz godine u godinu napreduje i postaje popularniji, pre svega u iOS programiranju. Očekuje se njegova ekspanzija u narednom periodu, pre svega zbog sve većeg korišćenja iOS aplikacija, a ovaj programski jezik je o tome najbolji. Godinama se radilo na Swift-u i on nastavlja da evoluira sa novim funkcionalnostima, a cilj koji ima je veoma ambiciozan. U ovom seminarskom radu čitalac se upoznaje sa osnovnim osobina i funkcionalnostima programskog jezika Swift. Rad ima za cilj da uvede čitaoca u ovaj jezik, a takodje, i da ga motiviše da nastavi sa učenjem i usavršavanjem ovog jezika. 
 
 
 \addcontentsline{toc}{section}{Literatura}
