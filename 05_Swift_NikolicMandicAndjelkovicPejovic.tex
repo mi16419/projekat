@@ -14,6 +14,13 @@
 \hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
 
 \usepackage{listings}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.10}
+\usetikzlibrary{calc} 
+
+\definecolor{RYB1}{RGB}{128, 177, 211}
+\definecolor{RYB2}{RGB}{251, 128, 114}
+\definecolor{RYB3}{RGB}{253, 180, 98}
 
 \lstdefinelanguage{Swift}{
   keywords={associatedtype, class, deinit, enum, extension, func, import, init, inout, internal, let, operator, private, protocol, public, static, struct, subscript, typealias, var, break, case, continue, default, defer, do, else, fallthrough, for, guard, if, in, repeat, return, switch, where, while, as, catch, dynamicType, false, is, nil, rethrows, super, self, Self, throw, throws, true, try, associativity, convenience, dynamic, didSet, final, get, infix, indirect, lazy, left, mutating, none, nonmutating, optional, override, postfix, precedence, prefix, Protocol, required, right, set, Type, unowned, weak, willSet},
@@ -154,8 +161,6 @@ C\# i Objective-C & Signed i unsigned int \\ \hline
 \end{center}
 \end{table}
 
-
-
 \section{Osnovna namena, svrha i mogućnosti}	
 \label{sec:drugiDeo}
 
@@ -189,8 +194,6 @@ zaštitni uslovi; zahvaljujući njima, izbegnute su automatske greške.
 Postoji još jedna funkcija, koja tehnički nije
 funkcija Swifta, već Xcode-a i kompajlera. To je \textbf{Mix and match}. Ona omogućava kreiranje aplikacija koje sadrže Objective-C i Swift fajlove. To omogućava da se sistematski ažuriraju aktuelne Objective-C aplikacije pomoću Swift klasa i upotrebu Objective-C biblioteka/radnih okvira u Swift aplikacijama.
 
-
-
 \section{Osnovne osobine programskog jezika}	
 \label{sec:treciDeo}
 
@@ -207,12 +210,61 @@ dobre osobine. Kao što smo već rekli u jezik Swift su uključene i osobine i m
 \item\textbf{Kompatibilnost sa razvojnim okruženjem Cocoa} - porgramski interfejsi aplikacije (API) razvojnog okruženja Cocoa napisani su u jezicima C i Objective-C. Swift je napravljen tako da koristi većinu API interfejsa razvojnog okruženja Cocoa.
 \end{itemize}
 
+Zbog svih ovih osobina, 2016. godine, programski jezik Swift je bio najplaćeniji jezik u Americi. Na sledećem grafikonu (slika \ref{fig:grafikon}) prikazano je 10 najplaćenijih programskih jezika:
+
+\begin{figure}
+
+\begin{tikzpicture}
+\pgfplotsset{width=10 cm}
+\begin{axis} [
+symbolic x coords={C++, Python, PHP, Ruby, Swift, C, JavaScript, SQL, Java},
+xtick={C++, Python, PHP, Ruby, Swift, C, JavaScript, SQL, Java},
+x tick label style={rotate=45, anchor=east, align=center},
+axis lines*=left,
+ymajorgrids = true,
+ylabel=\textbf{Zarada u hiljadama},
+legend style={at={(0.5,-0.10)},
+    anchor=north,legend columns=1},
+    ymin=80,
+    ytick={80,85,...,120},
+    ymax=120,
+    bar width=5mm,
+    ybar=-0.5cm, 
+   enlarge x limits={abs=0.6cm},
+    nodes near coords,        
+    every node near coord/.append style={color=black},
+]
+\addplot [RYB3,fill=RYB3]
+coordinates{ (C++,104) } ;
+\addplot [RYB2,fill=RYB2]
+coordinates{ (Python,107) } ;
+\addplot [RYB1,fill=RYB1]
+coordinates{ (PHP,89) } ;
+\addplot [RYB2,fill=RYB2]
+coordinates{ (Ruby,107) } ;
+\addplot [RYB2,fill=RYB2]
+coordinates{ (Swift,115) } ;
+\addplot [RYB1,fill=RYB1]
+coordinates{ (C,94) } ;
+\addplot [RYB3,fill=RYB3]
+coordinates{ (JavaScript,99) } ;
+\addplot [RYB1,fill=RYB1]
+coordinates{ (SQL,92) } ;
+\addplot [RYB3,fill=RYB3]
+coordinates{ (Java,102) } ;
+
+\end{axis}
+
+\end{tikzpicture}
+\caption{Najplaćeniji programski jezici u Americi 2016. godine}
+\label{fig:grafikon}
+\end{figure}
+
 \subsection{Podržane paradigme}
 \label{subsec:podnaslovParadigma}
 
 Programski jezik Swift je objektno orijentisani jezik, ali podržava i funkcionalno i imperativno
 programiranje. Sadrži sve osnovne koncepte objektno orijentisanog programiranja, i objektno orijentisana paradigma je najzastupljenija u ovom jeziku. Međutim, nekoliko osobina Swift jezika, kao što su funkcije prvog reda, sofisticirani sistem tipizacije, lambda izrazi, korišćenje Karijevih funkcija i parcijalna aplikacija, čine jezik posebno pogodnim za pisanje funkcionalnih programa. Swift, kao funkcionalni jezik, može se u svakodnevnoj praksi koristiti za pisanje kraćih, elegantnijih i sigurnijih programa, koji su lakši za održavanje, nadogradnju i testiranje.
-
 
 \section{Okruženja i njihove karakteristike}	
 \label{sec:cetvrtiDeo}
