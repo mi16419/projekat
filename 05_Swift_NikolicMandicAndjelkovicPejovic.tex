@@ -71,16 +71,16 @@
 
 \begin{document}
 
-\title{Programski jezik SWIFT\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
+\title{SWIFT - programski jezik budućnosti\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
 
-\author{Anđelković Dragica, Nikolić Igor, Pejović Petar, Mandić Igor\\ andjelkovic.dragica96@gmail.com, igor.nikolic032@hotmail.com,\\ petar.pejovic8@gmail.com, igormandic996@gmail.com}
+\author{Anđelković Dragica, Mandić Igor, Nikolić Igor, Pejović Petar\\ andjelkovic.dragica96@gmail.com,  igormandic996@gmail.com, \\ igor.nikolic032@hotmail.com, petar.pejovic8@gmail.com}
 
 %\date{9.~april 2015.}
 
 \maketitle
 
 \abstract{
-Swift je izvanredan jezik za pisanje softvera, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće kod. To je bezbedni, brzi i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku koja spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog koda (eng.~{\em open source}). Kompajler je optimizovan za preformanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
+Swift je izvanredan jezik za pisanje softvera, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće kod. To je bezbedan, brz i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku koja spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog koda (eng.~{\em open source}). Kompajler je optimizovan za preformanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
 
 
 \tableofcontents
@@ -131,7 +131,7 @@ Nakon treće verzije, jezgro programskog jezika Swift nije se drastično menjalo
   
 \subsection{Mesto u razvojnom stablu i uticaji drugih programskih jezika}
 \label{subsec:podnaslov6}
-Na razvoj Swifta uticali su mnogi programski jezici, od kojih su najznačajniji: Objective-C, Rust, Haskell, Ruby, Python, C\#, CLU \cite{chris_sajt}. Mesto programskog jezika Swfit u razvojnom stablu je predstavljeno na slici \ref{fig:razvojno_stablo}.
+Na razvoj Swifta uticali su mnogi programski jezici, od kojih su najznačajniji: Objective-C, Rust, Haskell, Ruby, Python, C\#, CLU \cite{chris_sajt}. Mesto programskog jezika Swift u razvojnom stablu je predstavljeno na slici \ref{fig:razvojno_stablo}.
 
 \begin{figure}[h!]
 \begin{center}
@@ -399,6 +399,9 @@ print("Hello world!");
 
 \end{lstlisting}
 
+\begin{primer}
+Stringovi se takodje dodeljuju pomoću operatora dodele. Konkatenacija stringova se vrši pomoću specijalnih karaktera '$\backslash$ (string)' ili jednostavnim navodjenjem u naredbi 'print', gde se stringovi razdvajaju zarezima.
+\end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Stringovi i konkatenacija stringova},frame=single, label=simple]
 
@@ -421,7 +424,7 @@ Listu stringova koji su razdvojeni određenim separatorom, pravimo pomoću nared
 var ime1 = "Swift"
 var ime2 = "Java"
 var ime3 = "Python"
-var ime3 = ""
+var ime4 = ""
 
 print(ime1,ime2,ime3,separator:", ", terminator:"")
 print(ime1,ime2,ime3,separator:", ", terminator:"", to:&ime4)
@@ -461,8 +464,8 @@ func dodaj_poene_i_novac(poeni:Int, novac:Float){
 	trenutno_stanje = trenutno_stanje + novac
 }
 
-dodaj_poene_i_novac(points: 30, novac: 1.45)
-dodaj_poene_i_novac(points: 60, novac: 2.86)
+dodaj_poene_i_novac(poeni: 30, novac: 1.45)
+dodaj_poene_i_novac(poeni: 60, novac: 2.86)
 
 print(skor)
 print(trenutno_stanje)
@@ -483,7 +486,6 @@ func izracunajMinMaxSuma(a: Int, b: Int) -> (min: Int, max: Int, suma: Int) {
         return (a, b, a + b)
     }
 }
- 
 let statistika = izracunajMinMaxSuma(5, b: 19)
 let (min2, max2, suma2) = izracunajMinMaxSuma(5, b: 19)
 print(suma2)            
@@ -499,7 +501,7 @@ print(statistika.2)
 Swift je veoma pristupačan novim programerima, to je industrijski kvalitetan programski jezik koji je veoma detaljan i pogodan kao skriptni jezik. Swift se dobro štiti od najzastupljenih programskih grešaka usvajanjem modernih paterna programiranja:
 \begin{itemize}
 \item Promenjive su uvek inicijalizovane pre upotrebe.
-\item Obrađena je greška za pristupanje nepostojećeg elementa niza (eng.~{\em out of bounds}).
+\item Obrađena je greška za pristupanje nepostojećem elementu niza (eng.~{\em out of bounds}).
 \item Integer-i su provereni za prekoračenje memorije (eng.~{\em overflow}).
 \item Opcione promenjive zahtevaju eksplicitno rukovanje.
 \item Memorijom se upravlja automatski.
