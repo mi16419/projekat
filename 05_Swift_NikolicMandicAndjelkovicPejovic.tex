@@ -80,7 +80,7 @@
 \maketitle
 
 \abstract{
-Swift je izvanredan jezik za pisanje softvera, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće kod. To je bezbedan, brz i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku koja spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog koda (eng.~{\em open source}). Kompajler je optimizovan za preformanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
+Swift je odličan jezik za pisanje softvera, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće kod. To je bezbedan, brz i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku koja spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog koda (eng.~{\em open source}). Kompajler je optimizovan za performanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
 
 
 \tableofcontents
@@ -89,7 +89,7 @@ Swift je izvanredan jezik za pisanje softvera, bilo da je to za mobilne telefone
 
 \section{Uvod}
 \label{sec:uvod}
-Swift je novi programski jezik opšte namene razvijen od strane kompanije Apple za iOS, macOS, watchOS, tvOS, Linux i z/OS. Dizajniran je da radi u Apple radnim okruženjima, Cocoa i Cocoa Touch i postojećeg Objective-C koda pisanog za Apple proizvode. Podržava imperativni, objektno-orijentisani i funkcionalni način programiranja. Napravljen je upotrebom LLVM programskog prevodioca otvorenog koda i uključen je u Xcode, počev od verzije 6 \cite{swift_sajt}. Swift koristi izvršno okruženje programskog jezika Objective-C, što omogućava izvršavanje C, C++, Objective-C i Swift koda u okviru jednog programa \cite{arc_sajt}.
+Swift je novi programski jezik opšte namene razvijen od strane kompanije Apple za iOS, macOS, watchOS, tvOS, Linux i z/OS. Dizajniran je da radi u Apple radnim okruženjima Cocoa i Cocoa Touch i postojećeg Objective-C koda pisanog za Apple proizvode. Podržava imperativni, objektno-orijentisani i funkcionalni način programiranja. Napravljen je upotrebom LLVM programskog prevodioca otvorenog koda i uključen je u Xcode, počev od verzije 6 \cite{swift_sajt}. Swift koristi izvršno okruženje programskog jezika Objective-C, što omogućava izvršavanje C, C++, Objective-C i Swift koda u okviru jednog programa \cite{arc_sajt}.
 Namera kompanije Apple je bila da Swift podrži mnoge ključne koncepte povezane sa programskim jezikom Objective-C.
 
  U ovom seminarskom radu čitalac se upoznaje sa osnovnim osobinama i funkcionalnostima programskog jezika Swift. Drugo poglavlje biće posvećeno istoriji nastanka programskog jezika Swift, kao i njegovom razvoju od prve verzije pa sve do danas. U trećem poglavlju biće opisane glavne mogućnosti i namena, dok je u četvrtom poglavlju dat pregled osnovnih osobina. Peto poglavlje će biti posvećeno razvojnim okruženjima, biće reči o osnovnim karakteristikama sledećih razvojnih okruženja: Xcode, Playground, SublimeText i Atom. U šestom poglavlju biće opisan način instalacije i pokretanja Swift-a na Windows i Linux operativnim sistemima. Primeri i kratka objašnjenja koda biće data u sedmom poglavlju. Tema poslednjeg poglavlja će biti specifičnosti ovog programskog jezika.
@@ -99,11 +99,11 @@ Namera kompanije Apple je bila da Swift podrži mnoge ključne koncepte povezane
 
 Razvoj programskog jezika Swift započeo je 2010. godine Chris Lattner, koji je implementirao veći deo osnovne strukture jezika, za čije je postojanje znala samo nekolicina ljudi. Tek su krajem 2011. godine i drugi programeri počeli da sarađuju na projektu Swift, a u julu 2013 godine on je postao glavni fokus grupe Apple Developer Tools \cite{mastering_swift3}. 
 
-Swift je predstavljen na međunarodnoj konferenciji programera (eng.~{\em Worldwide Developers Conference - WWDC}) 2014. godine, uz integrisano razvojno okruženje Xcode 6 i OS 8 \cite{thenextweb_sajt}. Apple je zvanično izbacio Swift u decembru 2015. godine, kao projekat otvorenog koda i pokrenuo je veb sajt \url{http://swift.org}, koji je posvećen zajednici Swift. Swift skladište nalazi  se na GitHub stranici kompanije Apple (\url{http://github.com/apple}). Swift razvojno skladište (\url{https://github.com/apple/swift-evolution}) prati napredak Swifta, dokumentujući predložene promene. U razvojnom skladištu može  se pronaći lista predloženih promena koje su prihvaćene i onih koje su odbijene. Swift 3 sadrži nekoliko poboljšanja koje je preporučila zajednica programera. U tabeli \ref{tab:tabela1} se nalaze sve do sada izbačene verzije programskog jezika Swift, u hronološkom redosledu.
+Swift je predstavljen na međunarodnoj konferenciji programera (eng.~{\em Worldwide Developers Conference - WWDC}) 2014. godine, uz integrisano razvojno okruženje Xcode 6 i OS 8 \cite{thenextweb_sajt}. Apple je zvanično  Swift u decembru 2015. godine, kao projekat otvorenog koda i pokrenuo je veb sajt \url{http://swift.org}, koji je posvećen zajednici Swift. Swift skladište nalazi  se na GitHub stranici kompanije Apple (\url{http://github.com/apple}). Swift razvojno skladište (\url{https://github.com/apple/swift-evolution}) prati napredak Swifta, dokumentujući predložene promene. U razvojnom skladištu može  se pronaći lista predloženih promena koje su prihvaćene i onih koje su odbijene. Swift 3 sadrži nekoliko poboljšanja koje je preporučila zajednica programera. U tabeli \ref{tab:tabela1} se nalaze sve do sada izbačene verzije programskog jezika Swift, u hronološkom redosledu.
 
 \begin{table}[h!]
 \begin{center}
-\caption{Istorijski razvoj programskog jezika Swift.}
+\caption{Istorijski razvoj programskog jezika Swift}
 \begin{tabular}{|c|c|} \hline
 \label{tab:tabela1}
 Datum & Verzija \\ \hline
@@ -145,8 +145,8 @@ Na razvoj Swifta uticali su mnogi programski jezici, od kojih su najznačajniji:
 
 \begin{table}[h!]
 \begin{center}
-\caption{Preuzeti koncepti iz drugih programskih jezika.}
-\begin{tabular}{|c|c|} \hline
+\caption{Preuzeti koncepti iz drugih programskih jezika}
+\begin{tabular}{|l|l|} \hline
 \label{tab:tabela2}
 Programski jezik & Šta je preuzeto \\ \hline
 JavaScript & Struktura podataka - rečnik  \\ \hline
@@ -213,8 +213,8 @@ Zbog svih ovih osobina, 2016. godine, programski jezik Swift je bio najplaćenij
 \begin{tikzpicture}
 \pgfplotsset{width=10 cm, height = 5cm}
 \begin{axis} [
-symbolic x coords={C++, Python, PHP, Ruby, Swift, C, JavaScript, SQL, Java},
-xtick={C++, Python, PHP, Ruby, Swift, C, JavaScript, SQL, Java},
+symbolic x coords={Swift, Python, Ruby, C++, Java, JavaScript, C, SQL, PHP},
+xtick={Swift, Python, Ruby, C++, Java, JavaScript, C, SQL, PHP},
 x tick label style={rotate=45, anchor=east, align=center},
 axis lines*=left,
 ymajorgrids = true,
@@ -231,23 +231,23 @@ legend style={at={(0.5,-0.10)},
     every node near coord/.append style={color=black},
 ]
 \addplot [RYB3,fill=RYB3]
-coordinates{ (C++,104) } ;
+coordinates{ (Swift,115) } ;
 \addplot [RYB2,fill=RYB2]
 coordinates{ (Python,107) } ;
 \addplot [RYB1,fill=RYB1]
-coordinates{ (PHP,89) } ;
+coordinates{ (Ruby,107)  } ;
 \addplot [RYB2,fill=RYB2]
-coordinates{ (Ruby,107) } ;
+coordinates{ (C++,104) } ;
 \addplot [RYB2,fill=RYB2]
-coordinates{ (Swift,115) } ;
+coordinates{ (Java,102) } ;
 \addplot [RYB1,fill=RYB1]
-coordinates{ (C,94) } ;
-\addplot [RYB3,fill=RYB3]
 coordinates{ (JavaScript,99) } ;
+\addplot [RYB3,fill=RYB3]
+coordinates{ (C,94)  } ;
 \addplot [RYB1,fill=RYB1]
 coordinates{ (SQL,92) } ;
 \addplot [RYB3,fill=RYB3]
-coordinates{ (Java,102) } ;
+coordinates{ (PHP,89)  } ;
 
 \end{axis}
 
@@ -303,19 +303,14 @@ Programski jezik Swift se može koristiti na različitim operativnim sistemima. 
 \subsection{Swift na Windows-u}
 \label{subsec:podnaslovWindows}
 
-Za instalaciju jezika Swift na Windows-u potrebno je prvo da ga preuzmemo sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga nam se pojavljuje prozor za instalaciju, gde pratimo dalja uputstva i tako instaliramo Swift i kompajler za ovaj jezik. Nakon završetka instalacije, potreban nam je editor teksta u kojem želimo da kodiramo. Možemo koristiti bilo koje od gore navedenih razvojnih okruženja u kojem nam je udobno da radimo. U ovom primeru koristićemo \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++} (slika \ref{fig:notpad}), koji je jednostavan, besplatan i lak za instalaciju.
+Za instalaciju jezika Swift na Windows-u potrebno je prvo da ga preuzmemo sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga nam se pojavljuje prozor za instalaciju, gde pratimo dalja uputstva i tako instaliramo Swift i kompajler za ovaj jezik. Nakon završetka instalacije, potreban nam je editor teksta u kojem želimo da kodiramo. Možemo koristiti bilo koje od gore navedenih razvojnih okruženja u kojem nam je udobno da radimo. U ovom primeru koristićemo \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}, koji je jednostavan, besplatan i lak za instalaciju.
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.35]{notepadpp.png}
-\end{center}
-\caption{Notpad}
-\label{fig:notpad}
-\end{figure}
 
 Nakon instalacije okruženja, napisaćemo jednostavan program koji ćemo kasnije pokrenuti pomoću Windows komandne linije. Prvo je potrebno da otvorimo novi Notepad++ fajl, i u njega unosimo komandu za ispis.
 
-\begin{lstlisting}[language=Swift]
+
+
+\begin{lstlisting}[language=bash, caption={Primer komande}]
 print("Hello world!")
 \end{lstlisting}
 
@@ -343,41 +338,41 @@ Možemo koristiti bilo koji integrisani editor koji Linux poseduje. Na isti nač
 
 Da bismo koristili Swift na Linux-u moramo ga prvo instalirati. U terminalu kucamo sledeće komande:
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, caption={Instaliranje Swift-a}]
 	wget https://swift.org/builds/ubuntu1510/swift-2.2-SNAPSHOT-2015-12-10-a/swift-2.2-SNAPSHOT-2015-12-10-a-ubuntu15.10.tar.gz
 
 \end{lstlisting}
 Nakon preuzimanja, pozicioniraćemo se u folder Downloads i tamo raspakovati arhivu u kojoj se nalazi Swift instalacija.
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, caption={Raspakovanje Swift instalacije}]
   cd ~/Downloads
   tar -xvzf swift-2.2-SNAPSHOT*
 \end{lstlisting}
 
 Kada raspakujemo fajl potrebno je podesiti putanju do BIN-a kako bismo mogli da izvršavamo programe.
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, caption={Podešavanje putanje do BIN-a}]
   cd ~/Downloads/swift-2.2-SNAPSHOT*
   cd usr/bin
   pwd
 \end{lstlisting}
 
 Kao rezultat komande pwd dobićemo tačnu lokaciju koju ćemo koristiti. Kopiramo i zamenimo je na sledeći način.
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, caption={Kopiranje putanje}]
   export PATH=path_to_swift_usr_bin:$PATH
 
 \end{lstlisting}
 
 Zatim moramo instalirati jos par biblioteka kako bi omogućili da Swift nesmetano funkcioniše na Linux-u.
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, caption={Instalacija biblioteka}]
   sudo apt-get install clang libicu-dev
   swift -version
 \end{lstlisting}
 
 Na kraju, da bismo kompajlirali i pokrenuli prethodno napisan program potrebno je da ukucamo sledeće komande:
 
-\begin{lstlisting}[language=bash]
+\begin{lstlisting}[language=bash, caption={Komanda za kompajliranje}]
   swift imeprograma.swift
   ./imeprograma
 \end{lstlisting}
@@ -393,7 +388,6 @@ Ispis teksta se vrši pomoću funkcije print(). Tačka-zarez su opcioni na kraju
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Ispis teksta},frame=single, label=simple]
-
 print("Hello world!")
 print("Hello world!");
 
@@ -404,7 +398,6 @@ Stringovi se takodje dodeljuju pomoću operatora dodele. Konkatenacija stringova
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Stringovi i konkatenacija stringova},frame=single, label=simple]
-
 var ime = "Swift"
 var jezik = "programski jezik"
 
@@ -420,7 +413,6 @@ print(poruka1)
 Listu stringova koji su razdvojeni određenim separatorom, pravimo pomoću naredbe print, gde se prvo navode stringovi koji čine tu listu, a nakon toga separator i terminator. Možemo koristiti jos jedan parametar u funkciji print(), pod nazivom toStream. Pomoću njega preusmeravamo ispis funkcije print(). Konkretno u ovom primeru preusmeravamo ispis u promenljivu ime4.
 \end{primer}
 \begin{lstlisting}[language=Swift, caption={Lista stringova},frame=single, label=simple]
-
 var ime1 = "Swift"
 var ime2 = "Java"
 var ime3 = "Python"
@@ -436,7 +428,6 @@ U ovom primeru je pokazana funkcionalnost for i while petlje. Takođe jos jednom
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Petlje},frame=single, label=simple]
-
 var x:Int = 0
 for x in 0...10 {
 	print(x)
@@ -455,7 +446,6 @@ Pozivanje funkcije sa parametrima koja nema povratnu vrednost. Sintaksa za dekla
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Funkcije bez povratne vrednosti},frame=single, label=simple]
-
 var skor:Int = 0
 var trenutno_stanje:Float = 0
 
@@ -477,7 +467,6 @@ Funkcije u programskom jeziku Swift dozvoljavaju da vraćamo jednu ili više vre
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Funkcije koje imaju povratnu vrednost},frame=single, label=simple]
-
 func izracunajMinMaxSuma(a: Int, b: Int) -> (min: Int, max: Int, suma: Int) {
     
     if a > b {
