@@ -80,7 +80,7 @@
 \maketitle
 
 \abstract{
-Swift je odličan jezik za pisanje softvera, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće k\^{o}d. To je bezbedan, brz i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku. Swift spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog koda (eng.~{\em open source}). Kompajler je optimizovan za performanse a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
+Swift je odličan jezik za pisanje softvera, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće k\^{o}d. To je bezbedan, brz i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku. Swift spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog k\^{o}da (eng.~{\em open source}). Kompajler je optimizovan za performanse, a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
 
 
 \tableofcontents
@@ -89,7 +89,8 @@ Swift je odličan jezik za pisanje softvera, bilo da je to za mobilne telefone, 
 
 \section{Uvod}
 \label{sec:prviDeo}
-Swift je novi programski jezik opšte namene razvijen od strane kompanije Apple za iOS, macOS, watchOS, tvOS, Linux i z/OS. Dizajniran je da radi u Apple radnim okruženjima Cocoa i Cocoa Touch. Podržava imperativni, objektno orijentisani i funkcionalni način programiranja. Napravljen je upotrebom LLVM programskog prevodioca otvorenog k\^{o}da i uključen je u Xcode, počev od verzije 6 \cite{swift_sajt}. Swift koristi izvršno okruženje programskog jezika Objective-C, što omogućava izvršavanje C, C++, Objective-C i Swift k\^{o}da u okviru jednog programa \cite{arc_sajt}.
+Swift je novi programski jezik opšte namene razvijen od strane kompanije Apple za iOS, macOS, watchOS, tvOS, Linux i z/OS. Dizajniran je da radi u Apple radnim okruženjima Cocoa i Cocoa Touch. Podržava imperativni, objektno orijentisani i funkcionalni način programiranja. Napravljen je upotrebom LLVM programskog prevodioca otvorenog k\^{o}da i uključen je u Xcode, počev od verzije 6 \cite{swift_sajt}. Swift koristi izvršno okruženje programskog jezika \\
+Objective-C, što omogućava izvršavanje C, C++, Objective-C i Swift k\^{o}da u okviru jednog programa \cite{arc_sajt}.
 Namera kompanije Apple je bila da Swift podrži mnoge ključne koncepte povezane sa programskim jezikom Objective-C.
 
 U ovom seminarskom radu čitalac se upoznaje sa osnovnim osobinama i funkcionalnostima programskog jezika Swift. Drugo poglavlje biće posvećeno istoriji nastanka programskog jezika Swift, kao i njegovom razvoju od prve verzije pa sve do danas. U trećem poglavlju biće opisane glavne mogućnosti i namena, dok je u četvrtom poglavlju dat pregled osnovnih osobina. Peto poglavlje će biti posvećeno razvojnim okruženjima, biće reči o osnovnim karakteristikama sledećih razvojnih okruženja: Xcode, Playground, SublimeText i Atom. U šestom poglavlju biće opisan način instalacije i pokretanja Swift-a na Windows i Linux operativnim sistemima. Primeri i kratka objašnjenja k\^{o}da biće data u sedmom poglavlju. Tema poslednjeg poglavlja će biti specifičnosti ovog programskog jezika.
@@ -134,7 +135,7 @@ Na razvoj Swift-a uticali su mnogi programski jezici, od kojih su najznačajniji
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.5]{razvojno_stablo.jpg}
+\includegraphics[scale=0.5]{razvojno_stablo.png}
 \end{center}
 \caption{Razvojno stablo}
 \label{fig:razvojno_stablo}
@@ -154,9 +155,9 @@ Scala i Opa & Zaključivanje tipova \\ \hline
 Cold Fusion i JSP & Interpolacija Stringa \\ \hline
 Python & Opciono naznačavanje kraja naredbe \\ \hline
 Java i C\# & Protokoli (Interfejsi) \\ \hline
-Lisp i Python & Tuples \\ \hline
+Lisp i Python & Torke (Tuples) \\ \hline
 Lisp i JavaScript &  Closure funkcije \\ \hline
-C\# i Objective-C & Signed i unsigned int \\ \hline
+C\# i Objective-C & Označeni i neoznačeni brojevi \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -171,7 +172,8 @@ Osim što je Swift poznat po razvoju aplikacija za Apple platforme, koristi se i
 
 Swift je sve popularniji programski jezik za razvoj IoT (eng.~{\em Internet of Things}) aplikacija. Kako bi kompanija Apple postala lider u primeni IoT aplikacija, razvijene su biblioteke i razvojni okviri koje rade najveći deo posla, dok se programeri mogu fokusirati na funcionalnosti IoT aplikacija.
 
-Neke od mogućnosti koje pruža pomoću svojih funkcija \cite{mastering_swift3}
+Swift ima svoju standardnu biblioteku. Biblioteka sadrži osnovne funkcionalnosti za pisanje Swift programa, uključujući tipove podataka, strukture podataka, funkcije, metode, protokole, i mnogo drugih stvari.\cite{naucni_rad}
+Neke od mogućnosti koje pruža pomoću svojih funkcija su: \cite{mastering_swift3}
 \begin{itemize}
 \item Automatsko utvrđivanje tipova - Swift može automatski da utvrdi tip promenljive ili konstante na osnovu inicijalne
 vrednosti. 
@@ -276,13 +278,15 @@ Playground  je interaktivno radno okruženje koje omogućava da pišemo k\^{o}d 
 \item Prostor za ispravljanje grešaka.
 \end{itemize}
 
-\subsection{SublimeText}
-\label{subsec:podnaslovSublimeText}
-Sublime Text  je verovatno jedan od najrasprostranjenijih okruženja. Poseduje dobar korisnički interfejs i sjajne performanse. On u osnovni podržava mnoge programske jezike a nove funkcionalnosti mogu biti dodate korišćenjem dodataka (plugina), koji je zajednica razvijala pod licencom slobodnog softvera. Vrlo lako ga možemo prilagoditi za razvoj Swift aplikacija dodatkom podrške za Swift pakete.
+\subsection{Cocoa Touch}
+\label{subsec:podnaslovCocoaTouch}
 
-\subsection{Atom}
+Cocoa Touch je okruženje prvenstveno napravljeno za razvoj programa
+koji su namenjeni uređajima koji koriste iOS operativni sistem. Ovo okruženje je napisano u ObjectiveC-u. Omogućava upotrebu hardvera i karakateristika koje nisu implementirani na macOS računarima, već je jedinstvena za iOS asortiman uredjaja. Sadrži različite skupove alata za kontrolu grafičkih elemenata. Alati za razvoj aplikacija ovog okruženja uključeni su u iOS SDK.
+
+\subsection{Sublime Text i Atom}
 \label{subsec:podnaslovAtom}
-Atom je razvijen od strane GitHub-a, visoko modularno okruženje koje omogućava laku instalaciju novih paketa što ga je svrstalo među najpoželjnija okruženja. Dodavanje podrške za Swift programiranje je jednostavno instaliranjem language-swift paketa.
+Sublime Text i Atom, iako nisu prvenstveno namenjeni za razvijanje Swift programa, verovatno su jedni od najrasprostranjenijih i najpozeljnihijih okruženja za rad. Poseduju dobar korisnički interfejs i sjajne performanse. U osnovni podržavaju mnoge jezike, a nove funkcionalnosti mogu biti dodate korišćenjem dodataka (plugina). Vrlo lako ih možemo prilagoditi za razvoj Swift aplikacija dodatkom podrške za Swift pakete.
 
 \section{Instalacija i uputstvo za pokretanje}	
 \label{sec:sestiDeo}
@@ -304,7 +308,7 @@ Sada kada imamo program, želimo da ga kompajliramo i pokrenemo. Za kompajliranj
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.35]{swift-win.png}
+\includegraphics[scale=0.30]{swift-win.png}
 \end{center}
 \caption{Korisničko okruženje za Windows}
 \label{fig:windows}
@@ -367,8 +371,8 @@ Ispis teksta se vrši pomoću funkcije print(). Tačka-zarez su opcioni na kraju
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Ispis teksta},frame=single, label=simple]
-print("Hello world!")
-print("Hello world!");
+print("Hello world!")				    // Hello World!
+print("Hello world!");					// Hello World!
 \end{lstlisting}
 
 \begin{primer}
@@ -382,8 +386,8 @@ var jezik = "programski jezik"
 var poruka = " je najbolji "
 var poruka1 = "\ (ime) je najbolji \ (jezik) !" 
 
-print(ime,poruka,jezik,"!")
-print(poruka1)
+print(ime,poruka,jezik,"!") 						// Swift je najbolji progmski jezik
+print(poruka1)										// Swift je najbolji progmski jezik
 \end{lstlisting}
 
 \begin{primer}
@@ -396,7 +400,7 @@ var ime2 = "Java"
 var ime3 = "Python"
 var ime4 = ""
 
-print(ime1,ime2,ime3,separator:", ", terminator:"")
+print(ime1,ime2,ime3,separator:", ", terminator:"") 		// Swift, Java, Python
 print(ime1,ime2,ime3,separator:", ", terminator:"", to:&ime4)
 \end{lstlisting}
 
@@ -433,8 +437,8 @@ func dodaj_poene_i_novac(poeni:Int, novac:Float){
 dodaj_poene_i_novac(poeni: 30, novac: 1.45)
 dodaj_poene_i_novac(poeni: 60, novac: 2.86)
 
-print(skor)
-print(trenutno_stanje)
+print(skor)										// 90
+print(trenutno_stanje)							// 4.31
 \end{lstlisting}
 
 \begin{primer}
@@ -452,9 +456,31 @@ func izracunajMinMaxSuma(a: Int, b: Int) -> (min: Int, max: Int, suma: Int) {
 }
 let statistika = izracunajMinMaxSuma(5, b: 19)
 let (min2, max2, suma2) = izracunajMinMaxSuma(5, b: 19)
-print(suma2)            
-print(statistika.sum)   
-print(statistika.2)     
+print(suma2)            						// 24
+print(statistika.sum)   						// 24
+print(statistika.2)								// 5     
+\end{lstlisting}
+
+\begin{primer}
+Klase u programskom jeziku Swift se definišu sa 'class', nakon čega sledi ime klase. Klase sadrže polja, konstruktor i metode. Poljima klase se pristupa pomoću 'self', dok se konstruktor definiše pomoću ključne reči 'init',
+\end{primer}
+
+
+\begin{lstlisting}[language=Swift, caption={Klasa},frame=single, label=simple]
+class Osoba {
+    var ime: String
+    var godine: Int
+    
+    init(ime: String, godine: Int) {
+        self.ime = ime
+        self.godine = godine
+    }
+    func getIme() -> String {
+        return "Tvoje ime je \(self.ime)"
+	}
+}
+var osoba1 = Osoba(ime: "Daca", godine: 22)
+print(osoba1.getIme))								// Daca
 \end{lstlisting}
 
 \section{Specifičnosti}	
