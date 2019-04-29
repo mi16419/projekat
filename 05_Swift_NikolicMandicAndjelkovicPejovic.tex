@@ -80,7 +80,7 @@
 \maketitle
 
 \abstract{
-Swift je odličan jezik za pisanje softvera, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće k\^{o}d. To je bezbedan, brz i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku. Swift spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog k\^{o}da (eng.~{\em open source}). Kompajler je optimizovan za performanse, a jezik je optimizovan za razvoj, bez kompromisa na bilo kom frontu. }
+Swift je odličan jezik za pisanje softvera, bilo da je to za mobilne telefone, desktop računare, servere ili bilo šta što pokreće k\^{o}d. To je bezbedan, brz i dinamičan programski jezik koji kombinuje najbolje u jednom savremenom jeziku. Swift spaja najbolja znanja iz široke Apple inženjering kulture i različite doprinose iz zajednice otvorenog k\^{o}da (eng.~{\em open source}). Kompajler je optimizovan za performanse, a jezik je optimizovan za razvoj. }
 
 
 \tableofcontents
@@ -121,11 +121,11 @@ Datum & Verzija \\ \hline
 \end{center}
 \end{table}
 
-Prvu verziju karakteriše REPL alat koji omogućava izvršavanje  manjih fragmenata Swift koda i njegovo testiranje sa komandne linije. Ova verzija je donela poboljšanja performansi kompajlera i smanjila vreme potrebno za kompajliranje Swift programa. Prilikom pokretanja projekta, kompajliraju se samo fajlovi kod kojih je detektovana izmena, što je posebno značajno kod većih projekata \cite{swiftdev_sajt}. 
+Prvu verziju karakteriše REPL alat koji omogućava izvršavanje  manjih fragmenata Swift k\^{o}da i njegovo testiranje sa komandne linije. Ova verzija je donela poboljšanja performansi kompajlera i smanjila vreme potrebno za kompajliranje Swift programa. Prilikom pokretanja projekta, kompajliraju se samo fajlovi kod kojih je detektovana izmena, što je posebno značajno kod većih projekata \cite{swiftdev_sajt}. 
 
 U drugoj verziji, kao deo novog projekta, predstavljen je Swift paket menadžer (eng.~{\em packet manager}) za upravljanje Swift bibliotekama. Kao priprema za naredne verzije dodata je provera verzije izvršnog okruženja (eng.~{\em framework}). 
 
-Treća verzija sadrži osnovne promene u samom jeziku i biblioteci Swift standarda, zbog toga nije kompatibilna sa prethodnim verzijama jezika. Jedan od osnovnih ciljeva bio je da bude kompatibilan na više platformi, to znači da će k\^{o}d koji se napše za MAC OS funkcionisati i na Linuxu. Tranzicija od druge verzije je bila veoma velika i teška programerima za ispravljanje, projekti su prijavljivali gomilu grešaka tako da su mnogi projekti počinjani ispočetka. 
+Treća verzija sadrži osnovne promene u samom jeziku i biblioteci Swift standarda, zbog toga nije kompatibilna sa prethodnim verzijama jezika. Jedan od osnovnih ciljeva bio je da bude kompatibilan na više platformi, to znači da će k\^{o}d koji se napše za macOS funkcionisati i na Linuxu. Tranzicija od druge verzije je bila veoma velika i teška programerima za ispravljanje, projekti su prijavljivali gomilu grešaka tako da su mnogi projekti počinjani ispočetka. 
 
 Nakon treće verzije, jezgro programskog jezika Swift nije se drastično menjalo, stoga su četvrta i peta verzija kompatibilne sa trećom. U narednim verzijama radilo se na poboljšanjima implementacije pojedinih koncepata jezika. Poslednja verzija koja je izbačena je verzija 5.0.
   
@@ -155,9 +155,9 @@ Scala i Opa & Zaključivanje tipova \\ \hline
 Cold Fusion i JSP & Interpolacija Stringa \\ \hline
 Python & Opciono naznačavanje kraja naredbe \\ \hline
 Java i C\# & Protokoli (Interfejsi) \\ \hline
-Lisp i Python & Torke (Tuples) \\ \hline
+Lisp i Python & Torke (eng.~{\em Tuples}) \\ \hline
 Lisp i JavaScript &  Closure funkcije \\ \hline
-C\# i Objective-C & Označeni i neoznačeni brojevi \\ \hline
+C\# i Objective-C & Označeni i neoznačeni celi brojevi \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -166,13 +166,13 @@ C\# i Objective-C & Označeni i neoznačeni brojevi \\ \hline
 \label{sec:treciDeo}
 Pomoću Swift programskog jezika moguće je razviti bilo koji tip iOS i macOS aplikacija. Cilj Swift projekta je da stvori najbolji raspoloživi jezik za upotrebu, od programiranja sistema, preko razvoja mobilnih i desktop aplikacija do cloud usluga. Takođe, ubrzan je proces razvoja proizvoda, poboljšane su performanse i povećana sigurnost aplikacija.
 
-Jedna od glavnih namena Swift programskog jezika je kreiranje mobilnih aplikacija za iPhone i iPad uređaje. Swift je moguće izvršavati i na Linux operativnom sistemu. Članovi zajednice rade na stvaranju Swift aplikacija koje će se izvršavati i na Android platformama.
+Jedna od glavnih namena Swift programskog jezika je kreiranje mobilnih aplikacija za iPhone i iPad uređaje. Pored macOS, Swift je moguće izvršavati i na Linux operativnom sistemu. Članovi zajednice rade na stvaranju Swift aplikacija koje će se izvršavati i na Android platformama.
 
 Osim što je Swift poznat po razvoju aplikacija za Apple platforme, koristi se i u modernim server aplikacijama. Swift je odličan izbor za server aplikacije koje zahtevaju visoke performanse kompajlera, nizak stepen korišćenja memorije i visok nivo bezbednosti.
 
 Swift je sve popularniji programski jezik za razvoj IoT (eng.~{\em Internet of Things}) aplikacija. Kako bi kompanija Apple postala lider u primeni IoT aplikacija, razvijene su biblioteke i razvojni okviri koje rade najveći deo posla, dok se programeri mogu fokusirati na funcionalnosti IoT aplikacija.
 
-Swift ima svoju standardnu biblioteku. Biblioteka sadrži osnovne funkcionalnosti za pisanje Swift programa, uključujući tipove podataka, strukture podataka, funkcije, metode, protokole, i mnogo drugih stvari.\cite{naucni_rad}
+Swift ima svoju standardnu biblioteku. Biblioteka sadrži osnovne funkcionalnosti za pisanje Swift programa, uključujući tipove podataka, strukture podataka, funkcije, metode, protokole, i mnogo drugih stvari \cite{naucni_rad}.
 Neke od mogućnosti koje pruža pomoću svojih funkcija su: \cite{mastering_swift3}
 \begin{itemize}
 \item Automatsko utvrđivanje tipova - Swift može automatski da utvrdi tip promenljive ili konstante na osnovu inicijalne
@@ -262,7 +262,7 @@ programiranje. Sadrži sve osnovne koncepte objektno orijentisanog programiranja
 
 \section{Okruženja i njihove karakteristike}	
 \label{sec:petiDeo}
-Programski jezik Swift se može pisati u različitim okruženjima. Najpoznatije okruženje je \textbf{Xcode}, a pored njega, koriste se i AppCode, Atom, CLion, SublimeText.
+Programski jezik Swift se može pisati u različitim okruženjima. Najpoznatije okruženje je \textbf{Xcode}, a pored njega, koriste se i Playground, Cocoa Touch, Atom, SublimeText.
 
 \subsection{Xcode}
 \label{subsec:podnaslovXcode}
@@ -271,7 +271,7 @@ Postoji 9 verzija ovog okruženja, a od verzije 6, obuhvata i programski jezik S
 
 \subsection{Playground}
 \label{subsec:podnaslovPlayground}
-Playground je interaktivno radno okruženje koje omogućava pisanje kodova, a rezultati se vide odmah, čim su promene izvršene u k\^{o}du. Da bi se koristio ovaj okvir potrebno je prvo pokrenuti Xcode i zatim izaberati opciju Get started with a playground. Okruženje se sastoji od nekoliko delova, među kojima su najvažniji: 
+Playground je interaktivno radno okruženje koje omogućava pisanje kodova, a rezultati se vide odmah, čim su promene izvršene u k\^{o}du. Da bi se koristio ovaj okvir potrebno je prvo pokrenuti Xcode i zatim izabrati opciju Get started with a playground. Okruženje se sastoji od nekoliko delova, među kojima su najvažniji: 
 \begin{itemize}
 \item Prostor za kodiranje.
 \item Bočna traka za rezultate.
@@ -280,21 +280,20 @@ Playground je interaktivno radno okruženje koje omogućava pisanje kodova, a re
 
 \subsection{Cocoa Touch}
 \label{subsec:podnaslovCocoaTouch}
-
 Cocoa Touch je okruženje prvenstveno napravljeno za razvoj programa
-koji su namenjeni uređajima koji koriste iOS operativni sistem. Ovo okruženje je napisano u ObjectiveC-u. Omogućava upotrebu hardvera i karakateristika koje nisu implementirani na macOS računarima, već je jedinstvena za iOS asortiman uredjaja. Sadrži različite skupove alata za kontrolu grafičkih elemenata. Alati za razvoj aplikacija ovog okruženja uključeni su u iOS SDK.
+koji su namenjeni uređajima koji koriste iOS. Ovo okruženje je napisano u Objective-C-u. Omogućava upotrebu hardvera i karakateristika koje nisu implementirani na macOS računarima, već je jedinstvena za iOS asortiman uredjaja. Sadrži različite skupove alata za kontrolu grafičkih elemenata. Alati za razvoj aplikacija ovog okruženja uključeni su u iOS SDK (eng.~{\em Software Development Kit}).
 
 \subsection{Sublime Text i Atom}
 \label{subsec:podnaslovAtom}
-Sublime Text i Atom, iako nisu prvenstveno namenjeni za razvijanje Swift programa, verovatno su jedni od najrasprostranjenijih i najpozeljnihijih okruženja za rad. Poseduju dobar korisnički interfejs i sjajne performanse. U osnovni podržavaju mnoge jezike, a nove funkcionalnosti mogu biti dodate korišćenjem dodataka (plugina). Vrlo lako ih možemo prilagoditi za razvoj Swift aplikacija dodatkom podrške za Swift pakete.
+Sublime Text i Atom, iako nisu prvenstveno namenjeni za razvijanje Swift programa, verovatno su jedni od najrasprostranjenijih i najpoželjnihijih okruženja za rad. Poseduju dobar korisnički interfejs i sjajne performanse. U osnovni podržavaju mnoge jezike, a nove funkcionalnosti mogu biti dodate korišćenjem dodataka (eng.~{\em plugina}). Vrlo lako ih možemo prilagoditi za razvoj Swift aplikacija dodatkom podrške za Swift pakete.
 
 \section{Instalacija i uputstvo za pokretanje}	
 \label{sec:sestiDeo}
-Programski jezik Swift se može koristiti na različitim operativnim sistemima. Ukoliko se koristi MAC operativni sistem, dovoljno je da se preuzme i instalira Xcode razvojno okruženje, jer Xcode uključuje izdanje Swift-a koje podržava Apple. Za Linux i Windows, instalacija i pokretanje su složeniji, i biće prikazani u ovom poglavlju.
+Programski jezik Swift se može koristiti na različitim operativnim sistemima. Ukoliko se koristi macOS, dovoljno je da se preuzme i instalira Xcode razvojno okruženje, jer Xcode uključuje izdanje Swift-a. Za Linux i Windows, instalacija i pokretanje su složeniji, i biće prikazani u ovom poglavlju.
 
-\subsection{Swift na Windows-u}
+\subsection{Windows}
 \label{subsec:podnaslovWindows}
-Za instalaciju programskog jezika Swift na Windows-u potrebno ga je prvo preuzeti sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga, pojavljuje se prozor za instalaciju, gde se prate dalja uputstva i tako instalira Swift i kompajler za Swift. Nakon završetka instalacije, potreban je editor teksta u kojem se piše k\^{o}d. Može se koristiti bilo koje razvojno okruženja, u ovom primeru koristi se \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}, koji je jednostavan, besplatan i lak za instalaciju.
+Za instalaciju programskog jezika Swift na operativnom sistemu Windows potrebno ga je prvo preuzeti sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga, pojavljuje se prozor za instalaciju, gde se prate dalja uputstva i tako instalira Swift i kompajler za Swift. Nakon završetka instalacije, potreban je editor teksta u kojem se piše k\^{o}d. U ovom primeru koristi se \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}, koji je jednostavan, besplatan i lak za instalaciju.
 
 Nakon instalacije okruženja, treba napisati jednostavan program koji će se kasnije pokrenuti pomoću Windows komandne linije. Prvo je potrebno otvoriti novi Notepad++ fajl, i u njega uneti komandu za ispis.
 
@@ -314,15 +313,15 @@ Kada je program napisan i sačuvan, potrebno ga je kompajlirati i pokrenuti. Za 
 \label{fig:windows}
 \end{figure}
 
-Nakon pritiska na Select File, potrebno je izabrati program i pritisnuti Compile. Nakon što se kompilacija završi dobija se poruku “Successfully compiled”.
+Nakon pritiska na Select File, potrebno je izabrati program i pritisnuti Compile. Nakon što se kompilacija završi dobija se poruka “Successfully compiled”.
 Jednom kompajliran program može se pokrenuti neograničen broj puta.
 
-\subsection{Swift na Linux-u}
+\subsection{Linux}
 \label{subsec:podnaslovLinux}
 Kao i u prethodnom primeru, potreban je tekst editor gde će se napisati jednostavan k\^{o}d.
-Može se koristiti bilo koji integrisani editor koji Linux poseduje. Na isti način, kodira se poruku za ispis "Hello World", kao u prethodnom primeru, i taj fajl se čuva sa ekstenzijom .swift.
+Može se koristiti bilo koji integrisani editor koji Linux poseduje. Na isti način, kodira se poruka za ispis "Hello World", kao u prethodnom primeru, i taj fajl se čuva sa ekstenzijom .swift.
 
-Da bi se koristio Swift na Linux-u mora se prvo instalirati. U terminalu se kucaju sledeće komande:
+Da bi se koristio Swift na Linux operativnom sistemu mora se prvo instalirati. U terminalu se kucaju sledeće komande:
 
 \begin{lstlisting}[language=bash, caption={Instaliranje Swift-a}]
 	wget https://swift.org/builds/ubuntu1510/swift-2.2-SNAPSHOT-2015-12-10-a/swift-2.2-SNAPSHOT-2015-12-10-a-ubuntu15.10.tar.gz
@@ -362,7 +361,7 @@ Na kraju, za kompajliranje i pokretanje prethodno napisanog programa, potrebno j
   ./imeprograma
 \end{lstlisting}
 
-\section{Primer jednostavnog koda i njegovo objašnjene}	
+\section{Primer jednostavnog koda i njegovo objašnjenje}	
 \label{sec:sedmiDeo}
 U narednim primerima biće prikazane i objašnjene osnovne funkcionalnosti jezika Swift.
 
@@ -376,7 +375,7 @@ print("Hello world!");					// Hello World!
 \end{lstlisting}
 
 \begin{primer}
-Stringovi se takodje dodeljuju pomoću operatora dodele. Konkatenacija stringova se vrši pomoću specijalnih karaktera '$\backslash$ (string)' ili jednostavnim navodjenjem u naredbi 'print', gde se stringovi razdvajaju zarezima.
+Stringovi se takođe dodeljuju pomoću operatora dodele. Konkatenacija Stringova se vrši pomoću specijalnih karaktera '$\backslash$ (string)' ili jednostavnim navođenjem u naredbi 'print', gde se Stringovi razdvajaju zarezima.
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Stringovi i konkatenacija stringova},frame=single, label=simple]
@@ -386,12 +385,14 @@ var jezik = "programski jezik"
 var poruka = " je najbolji "
 var poruka1 = "\ (ime) je najbolji \ (jezik) !" 
 
-print(ime,poruka,jezik,"!") 						// Swift je najbolji progmski jezik
-print(poruka1)										// Swift je najbolji progmski jezik
+print(ime,poruka,jezik,"!")
+// Swift je najbolji progmski jezik!
+print(poruka1) 
+// Swift je najbolji progmski jezik!
 \end{lstlisting}
 
 \begin{primer}
-Lista stringova koja je razdvojena određenim separatorom pravi se pomoću naredbe print, gde se prvo navode stringovi koji čine tu listu, a nakon toga separator i terminator. Može se koristiti još jedan parametar u funkciji print(), pod nazivom toStream. Pomoću njega preusmerava se ispis funkcije print(). Konkretno u ovom primeru preusmerava se ispis u promenljivu ime4.
+Lista Stringova koja je razdvojena određenim separatorom pravi se pomoću naredbe print, gde se prvo navode Stringovi koji čine tu listu, a nakon toga separator i terminator. Može se koristiti još jedan parametar u funkciji print(), pod nazivom toStream. Pomoću njega preusmerava se ispis funkcije print(). Konkretno u ovom primeru preusmerava se ispis u promenljivu ime4.
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Lista stringova},frame=single, label=simple]
@@ -400,8 +401,10 @@ var ime2 = "Java"
 var ime3 = "Python"
 var ime4 = ""
 
-print(ime1,ime2,ime3,separator:", ", terminator:"") 		// Swift, Java, Python
+print(ime1,ime2,ime3,separator:", ", terminator:"") 
+// Swift, Java, Python
 print(ime1,ime2,ime3,separator:", ", terminator:"", to:&ime4)
+// Swift, Java, Python
 \end{lstlisting}
 
 \begin{primer}
@@ -465,7 +468,6 @@ print(statistika.2)								// 5
 Klase u programskom jeziku Swift se definišu sa 'class', nakon čega sledi ime klase. Klase sadrže polja, konstruktor i metode. Poljima klase se pristupa pomoću 'self', dok se konstruktor definiše pomoću ključne reči 'init',
 \end{primer}
 
-
 \begin{lstlisting}[language=Swift, caption={Klasa},frame=single, label=simple]
 class Osoba {
     var ime: String
@@ -485,21 +487,21 @@ print(osoba1.getIme))								// Daca
 
 \section{Specifičnosti}	
 \label{sec:osmiDeo}
-Swift je veoma pristupačan novim programerima, to je industrijski kvalitetan programski jezik koji je veoma detaljan i pogodan kao skriptni jezik. Swift se dobro štiti od najzastupljenih programskih grešaka usvajanjem modernih paterna programiranja:
+Swift je veoma pristupačan novim programerima, to je industrijski kvalitetan programski jezik koji je veoma detaljan i pogodan kao skriptni jezik \cite{swift_sajt}. Swift se dobro štiti od najzastupljenih programskih grešaka usvajanjem modernih paterna programiranja:
 \begin{itemize}
 \item Promenjive su uvek inicijalizovane pre upotrebe.
 \item Obrađena je greška za pristupanje nepostojećem elementu niza (eng.~{\em out of bounds}).
-\item Celi brojevi (Integer) su provereni za prekoračenje memorije (eng.~{\em overflow}).
+\item Celi brojevi (eng.~{\em integers}) su provereni za prekoračenje memorije (eng.~{\em overflow}).
 \item Opcione promenjive zahtevaju eksplicitno rukovanje.
 \item Memorijom se upravlja automatski.
-\item Rukovanje greškama omogućava kontrolisani oporavak od neočekivanih prekida (crash).
+\item Rukovanje greškama omogućava kontrolisani oporavak od neočekivanih prekida (eng.~{\em crash}).
 \end{itemize}
 
-Swift kod je kompajliran i optimizovan da izvuče najviše iz modernog hardvera. Ova kombinacija sigurnosti i brzine čini Swift odličnim izborom za sve, od komande "Hello world!", do celog operativnog sistema.
+Swift kombinuje paterne sa modernom laganom sintaksom omogućavajući da složene ideje budu predstavljene na koncizan način i kao rezultat k\^{o}d nije samo lakši za pisanje, već je i lakši za čitanje i održavanje. Swift k\^{o}d je kompajliran i optimizovan da izvuče najviše iz modernog hardvera. Ova kombinacija sigurnosti i brzine čini Swift odličnim izborom za sve, od komande "Hello world!", do celog operativnog sistema.
 
 \section{Zaključak}
 \label{sec:zakljucak}
-Swift je mlad jezik, koji iz godine u godinu napreduje i postaje popularniji u iOS programiranju. Očekuje se njegova ekspanzija u narednom periodu, pre svega zbog sve većeg korišćenja iOS aplikacija. Godinama se radilo na Swift-u i on nastavlja da evoluira sa novim funkcionalnostima, a cilj koji ima je veoma ambiciozan. Ovaj seminarski rad ima za cilj da uvede čitaoca u ovaj programski jezik, a takođe, i da ga motiviše da nastavi sa učenjem i usavršavanjem ovog jezika. 
+Swift je mlad programski jezik, koji iz godine u godinu napreduje i postaje popularniji u iOS programiranju. Očekuje se njegova ekspanzija u narednom periodu, pre svega zbog sve većeg korišćenja iOS aplikacija. Godinama se radilo na Swift-u i on nastavlja da evoluira sa novim funkcionalnostima, a cilj koji ima je veoma ambiciozan. Ovaj seminarski rad ima za cilj da uvede čitaoca u Swift programski jezik, takođe i da ga motiviše da nastavi sa učenjem i usavršavanjem. 
 
 \addcontentsline{toc}{section}{Literatura}
 \appendix
