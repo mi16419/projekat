@@ -1,0 +1,337 @@
+ % !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{report}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+
+\begin{document}
+
+\title{Dopunite naslov svoga rada\\ \small{Dopunite autore rada}}
+
+\maketitle
+
+\tableofcontents
+
+
+\chapter{Recenzent \odgovor{--- ocena: 4} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+
+Rad govori o nastanku, osobinama i upotrebi programskog jezika Swift. U okviru Swift-a moguće je korišćenje koda iz programskih jezika Objective-C, C ili C++, kao i programiranje u više programskih paradigmi. Budući da je u pitanju proizvod kompanije Apple, Swift je pogodan za programiranje aplikacija za macOS i iOS uređaje.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+
+U sekciji 3 se, u jednom delu, opisuju osnovna namena i svrha; ti delovi više pripadaju uvodu i/ili zaključku.
+
+\odgovor{Poglavlje 3 je posvećeno osnovnoj nameni, svrsi i mogućnostima programskog jezika. U Uvodu ima reči o nameni, ali se u ovom delu malo detaljnije bavimo time.}
+
+
+U sekciji 4 se govori o okruženjima Sublime Text i Atom; ali, budući da su u pitanju klasični editori teksta sa mogućnosti proširivanja uz pomoć \textit{plugin} sistema, nisu previše vezani za sam programski jezik Swift.
+
+\odgovor{Ispravljeno, dodato je i opisano razvojno okruženje Cocoa Touch, ali su Sublime Text i Atom, zbog svog značaja u Swift programiranju, zadržani.}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+
+U prvoj rečanici sažetka, rečeno je da je Swift "izvanredan" jezik. Takvi epiteti ne bi trebalo da stoje u tekstovima naučnog karaktera. Takođe, reč "performanse" je pogrešno napisana.
+
+\odgovor{Ispravljeno u \textit{"je opšte primenljiv programski jezik "} i \textit{"performanse"}.}
+
+
+Rečenica u uvodu "Dizajniran je da radi u Apple radnim okruženjima, Cocoa i Cocoa Touch i postojećeg Objective-C koda pisanog za Apple proizvode" nema previše smisla (tačnije, deo koji pominje Objecive-C nema smisla). Zapeta u datoj rečenici je napotrebna.
+
+\odgovor{Obrisana zapeta i deo rečenice koji nije bio smislen.}
+
+U sekciji 2 stoji rečenica "Apple je izbacio...". Mišljenja sam da bi se reč "izbacio" mogla zameniti rečju "objavio". U podsekciji 2.1 se nalazi slika razvojnog stabla koja je malo zbunjujuća - dodavanje strelica bi olakšalo razumevanje dotične slike.
+
+\odgovor{Ispravljeno u \textit{"Apple je zvanično objavio"}. Programski jezici su poređani hronološki, s leva u desno, takođe ispod svakog programskog jezika je napisana godina nastanka, pa smo mišljenja da se na osnovu toga može zaključiti koji su programski jezici na koje uticali.}
+
+U sekciji 3 se pominje mogućnost korišćenja Swift-a na "Linux operativnim sistemima i Raspberry Pi", ali, budući da je Raspberry Pi računar, a ne platforma, pominjanje istog se čini redudantnim.
+
+\odgovor{Ispravljeno u \textit{"je moguće izvršavati i na Linux operativnom sistemu"}. }
+
+Slika 2 u okviru sekcije 4 prikazuje zaradu programera - te zarade bi trebalo sortirati.
+
+\odgovor{Ispravljeno, zarade su sada sortirane.}
+
+U Sekciji 6, operativni sistemi razvijeni od strane Apple-a se zovu \textit{macOS}. Takođe, rečenica u nastavku "...Xcode uključuje izdanje Swift-a koje podržava Apple" nije smislena; logičnije bi bilo "koja podržava macOS sisteme".
+
+\odgovor{Ispravljeno, naziv operativnog sistema je promenjen, rečenica je preformulisana \textit{"Ukoliko se koristi macOS, dovoljno je da se preuzme i instalira Xcode razvojno okruženje, jer Xcode uključuje izdanje Swift-a"} .}
+
+Slika 4 stoji u sred sekcije "Swift na Linux-u", iako je na slici prikazano okruženje za Windows.
+
+\odgovor{Slika se sada nalazi na pravom mestu.}
+
+U okviru kodova, po svemu sudeći, nije korišćen monospace font, tako da je preglednost istih otežana. Takođe, kod nekih kodova postoji prva linija koja je prazna.
+
+\odgovor{Obrisana je svuda prva prazna linija.}
+
+U okviru literature se, u okviru nekih referenci, nalaze nepotrebni tabulatori.
+
+\odgovor{Literatura je ispravljena tako da se sada ne nalaze nepotrebni tabulatori.}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?
+
+\odgovor{\textbf{Da.} Rad je, i pored sitnih grešaka, uspeva da omogući čitaocu da se, na adekvatan način, upozna sa programskim jezikom Swift.}
+
+\item Da li je nešto važno propušteno?
+
+\odgovor{\textbf{Nije.} Najvažnije stvari su rečene: mogućnosti Swifta kao programskog jezika, kao i njegove specifičnosti su predočene na odgovarajuć način.}
+
+\item Da li ima suštinskih grešaka i propusta?
+
+\odgovor{\textbf{Ne.} Rad ima nekih krupnijih grešaka, ali to nisu greške koje se mogu okarakterisati kao "suštinske".}
+
+\item Da li je naslov rada dobro izabran?
+
+\odgovor{\textbf{Nije.} Smatram da bi naslov trebalo da bude malo kreativniji.}
+
+\odgovor{Naslov je sada promenjen u \textbf{Razvoj i primena programskog jezika SWIFT}.}
+
+\item Da li sažetak sadrži prave podatke o radu?
+
+\odgovor{\textbf{Da.} Stavljanje informacije da je Swift napravljen od strane Apple-a je dobar način da čitaoca privuče daljem čitanju, budući da se radi o prestižnoj korporaciji.}
+
+\item Da li je rad lak-težak za čitanje?
+
+\odgovor{\textbf{Lak.} Mislim da informatički obrazovani čitaoci neće imati bilo kakav problem sa praćenjem rada.}
+
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?
+
+\odgovor{\textbf{Da.} Rad je najverovatnije i namenjen ljudima upoznatim sa osnovnim konceptima programiranja. Osim toga, rad nema specijalne prohteve za razumevanje istog.}
+
+\item Da li je u radu navedena odgovarajuća literatura?
+
+\odgovor{\textbf{Da.} Korišćene su informacije sa oficijelnog Swift sajta ili iz knjiga renomiranih izdavača.}
+
+\item Da li su u radu reference korektno navedene?
+
+\odgovor{\textbf{Ne.} Naišao sam na konfliktne informacije prilikom rada izvesnog Ivice Milovanovića sa Računarskog Fakulteta. Na \href{\underline{https://www.raf.edu.rs/en/component/k2/item/5768-milovanovic-ivica}}{zvaničnom sajtu RAF-a} piše da je u pitanju master rad, a ne doktorska teza, kao što je navedeno. Ostale reference su sasvim u redu.}
+
+
+\odgovor{Referenca je sada ispravljena.}
+
+
+\item Da li je struktura rada adekvatna?
+
+\odgovor{\textbf{Da.} Rad sadrži sve neophodne sekcije, koje su navedene u logičnom redosledu.}
+
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?
+
+\odgovor{\textbf{Ne.} Rad treba da sadrži referencu na makar jedan naučni žurnal. Osim toga, rad ima 11 strana, dve tabele i više slika, što zadovoljava postavljene zahteve.}
+
+\odgovor{Dodat je naučni rad.}
+
+\item Da li su slike i tabele funkcionalne i adekvatne?
+
+\odgovor{\textbf{Da.} One sasvim adekvatno prikazuju zamisli autora.}
+
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+\odgovor{d) malo upućeni}
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+
+
+\chapter{Recenzent \odgovor{--- ocena: 3} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+	Swift, napravljen od stranje kompanije Apple, počijne kao mali projekat 2010. dok 2013. postaje glavni fokus Apple Developer Tools.
+	Nastaje pod uticajem drugih jezika, od kojih je najznačajniji Objective-C, Rust, Haskell, Ruby i Python. Swift preuzima neke od karakteristka drugih programskih jezika.
+	Primarno je namenjen za razvijanje iOS aplikacija, ali ima i primene kod modernih serverskih aplikacija. Postaje sve popularniji kod izrade IOT aplikacija. Neke od mogućnosti
+	koje pruža Swift jesu automatsko utvrđivanje tipova, generički tipovi i pseudoklase. Najznačajnija osobina veoma je jasan i bezbedan. Zbog posedovanja takvih osobina on je spadao
+	u najplaćeniji programski jezik u SAD 2016. godine.	Podržava objektno-orijentisanu, imperativnu i funkcionalnu paradigmu. Najpopularnije okruženje za rad sa Swift-om je Xcode koji je napravila kompanija 
+	Apple. Takođe neka od popularnijih okruženja su Sublime i Atom Text editori. Za instalaciju na Windows sistemu koristi se razvojno okruženje, dok se pod linuxom instalira sam kompajler.
+	Swift je izuzetno kvalitetan industriski program. Napravljen je tako da maksimalno izvuče od modernog hardvera.
+
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+\begin{itemize}
+    \item Kod instalacije za Linux, možda je bolje da se koristi stable verzija kompajlera a ne snapshot.
+    
+    \odgovor{Ispravljeno je, uputstvo za instalaciju sada vodi do stable verzije kompajlera.}
+    
+	\item Da se za primer instalacije koristi tcolorbox umesto listings (npr. \\begin{tcolorbox}[colback=green!5!white,colframe=green!5!white,fontupper=\\ttfamily] )
+	
+    \odgovor{Koristimo listings kroz ceo rad, u delu instalacije on je podešen na odgovarajući način. Zadržaćemo ovu formu. }
+    
+	\item Mislim da treba da se promeni instalacija kod Windows OS-a. Koristi se razvojno okruženje dok možda bi bilo bolje da se skine sam kompiler (Novija verzija WIN 10 ima WSL (Windows Subsystem for Linux) pa se 
+	instalacija pod win vrši potpuno ekvivalentno kao kod Linux sistema).
+	
+	\odgovor{Naša instalacija odgovara svim verzijama Windowsa.}
+
+	\item Kod primera kodova mislim da bi bilo dobro i da ima izlaz koda koji je napisan.
+	
+	\odgovor{Ispravljeno, dodat je izlaz za kodove.}
+
+	\item Kod literature, 6 i 7, javlja se mnogo razmaka.
+	
+	\odgovor{Literatura je ispravljena tako da se sada ne nalaze nepotrebni tabulatori.}
+	
+\end{itemize}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+\odgovor{Nisam zapazio štamparske-stilske-jezičke greške}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+\odgovor{ Da, rad pokriva sve tražene teme.}
+\item Da li je nešto važno propušteno?\\ 
+\odgovor {Ne, rad pokriva sve važne aspekte Swift-a.}
+\item Da li ima suštinskih grešaka i propusta?\\
+\odgovor {Nisam naišao suštinske greške i propuste.}
+\item Da li je naslov rada dobro izabran?\\
+\odgovor {Izabran naslov odgovara radu.}
+\item Da li sažetak sadrži prave podatke o radu?\\ 
+\odgovor {Sažetak sadrži sve važne koncepte koji se javljaju u radu.}
+\item Da li je rad lak-težak za čitanje?\\
+\odgovor {Rad je lak za čitanje.}
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\ 
+\odgovor {Za razumevanje je potrebno osnovno znaje o programiranju.}
+\item Da li je u radu navedena odgovarajuća literatura?\\ 
+\odgovor {Jeste. Literatura obuhvata rad, knjigu, i tehničku stranicu swift jezika.}
+\item Da li su u radu reference korektno navedene?\\
+\odgovor {Jesu.}
+\item Da li je struktura rada adekvatna?\\ 
+\odgovor {Struktura rada je adekvatna. Počinje sa istorijatom, potom govori o samom jeziku i njegovim specifičnostima i završava se sa radnim okruženjima. Zaključak je adekvatno napisan.}
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\ 
+\odgovor {Da ispunjava sve uslove.}
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+\odgovor {Jesu.}
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+\odgovor {Malo sam upućen u jezik Swift. Do sada samo čuo za njega, nikad ga nisam koristio.}
+
+\chapter{Recenzent \odgovor{--- ocena: 2} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Rad govori o programskom jeziku Swift. O njegovom nastanku i razvoju kroz istoriju.
+O njegovim osnovnim namenama kao što su razvoj aplikacija za iPhone i iPad uređaje.
+Govori o podržanim paradigmam kao što su objektno-orjentisana, funkcionalna i imperativna.
+Na kraju su objašnjena razvojna okruženja koja se koriste, instalacija programskog jezika Swift kao i osnovni primeri.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+U tekstu nije objašnjeno zašto je Swift programski jezik budućnosti kako stoji u naslovu teme.
+Šta je to što ga razlikuje od ostalih programskih jezika.
+Zašto bi čitaoce trebalo da zainteresuje programski jezik. 
+
+\odgovor{Ispravljeno tako da naslov odgovara temi rada.}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+
+Naslove tabela pisati bez tačke na kraju.
+Izbegavati vertikalne linije u tabelama.
+
+\odgovor{Obrisane su tačke kod naslova tabela.}
+
+Slika 2 ispada iz leve margine. Trebalo bi da se pomeri udesno.
+
+\odgovor{Slika je sada pomerena tako da ne ispada iz leve margine.}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Ne u potpunosti. U naslovu teme se napominje kako je Swift jezik budućnosti, ali to nije opisano u tekstu.
+
+\odgovor{Promenjen je naslov tako da sada odgovara temi seminarskog rada.}
+
+\item Da li je nešto važno propušteno?\\
+Ne, seminarski rad sadrži adekvatnu strukturu. Autori su se potrudili da predstave jezik na najbolji mogući način.
+
+\item Da li ima suštinskih grešaka i propusta?\\
+Rad nema suštinskih grešaka.
+
+\item Da li je naslov rada dobro izabran?\\
+Smatram da naslov rada nije dobro izabran. Rad se više fokusira na upoznavanju čitalaca sa programskim jezikom,
+nego šta to čini Swift programskim jezikom budućnosti.
+
+\odgovor{Naslov je sada promenjen u \textbf{Razvoj i primena programskog jezika SWIFT}.}
+
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak sadrži prave podatke koji su opisani u radu.
+
+\item Da li je rad lak-težak za čitanje?\\
+Rad je lak za čitanje. Ne postoje pojmovi koji bi mogli biti nepoznati čitaocima a da nisu objašnjeni.
+
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Za razumevanje teksta nije potrebno predznanje iz programskog jezika Swift. Potrebno je predznanje osnova programiranja.
+
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Da, u radu je navedena odgovarajuća literatura.
+
+\item Da li su u radu reference korektno navedene?\\
+Da, sve reference u korektno navedene u tekstu.
+
+\item Da li je struktura rada adekvatna?\\
+Struktura rada je adekvatna. Rad sadrži uvod, razradu, zaključak i čitaoci se postepeno uvode u temu.
+
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Rad sadrži slike, dijagram, tabele i ispunjeni su ostali uslovi seminarskog rada.
+
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Da, slike i tabele su funkcionalne i adekvatne.
+
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Potpuno sam neupućen. Nikada se nisam bavio razvojem aplikacija u programskom jeziku Swift, a ni razvojem mobilnih aplikacija generalno.
+
+
+\chapter{Dodatne izmene}
+%Ovde navedite ukoliko ima izmena koje ste uradili a koje vam recenzenti nisu tražili. 
+
+\end{document}
