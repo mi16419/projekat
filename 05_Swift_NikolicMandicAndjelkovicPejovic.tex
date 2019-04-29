@@ -73,7 +73,7 @@
 
 \title{SWIFT - programski jezik budućnosti\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
 
-\author{Anđelković Dragica, Mandić Igor, Nikolić Igor, Pejović Petar\\ andjelkovic.dragica96@gmail.com,  igormandic996@gmail.com, \\ igor.nikolic032@hotmail.com, petar.pejovic8@gmail.com}
+\author{Dragica Anđelković, Igor Mandić, Igor Nikolić, Petar Pejović\\ andjelkovic.dragica96@gmail.com,  igormandic996@gmail.com, \\ igor.nikolic032@hotmail.com, petar.pejovic8@gmail.com}
 
 %\date{9.~april 2015.}
 
@@ -93,13 +93,13 @@ Swift je novi programski jezik opšte namene razvijen od strane kompanije Apple 
 Objective-C, što omogućava izvršavanje C, C++, Objective-C i Swift k\^{o}da u okviru jednog programa \cite{arc_sajt}.
 Namera kompanije Apple je bila da Swift podrži mnoge ključne koncepte povezane sa programskim jezikom Objective-C.
 
-U ovom seminarskom radu čitalac se upoznaje sa osnovnim osobinama i funkcionalnostima programskog jezika Swift. Drugo poglavlje biće posvećeno istoriji nastanka programskog jezika Swift, kao i njegovom razvoju od prve verzije pa sve do danas. U trećem poglavlju biće opisane glavne mogućnosti i namena, dok je u četvrtom poglavlju dat pregled osnovnih osobina. Peto poglavlje će biti posvećeno razvojnim okruženjima, biće reči o osnovnim karakteristikama sledećih razvojnih okruženja: Xcode, Playground, SublimeText i Atom. U šestom poglavlju biće opisan način instalacije i pokretanja Swift-a na Windows i Linux operativnim sistemima. Primeri i kratka objašnjenja k\^{o}da biće data u sedmom poglavlju. Tema poslednjeg poglavlja će biti specifičnosti ovog programskog jezika.
+U ovom seminarskom radu čitalac se upoznaje sa osnovnim osobinama i funkcionalnostima programskog jezika Swift. Drugo poglavlje biće posvećeno istoriji nastanka programskog jezika Swift, kao i njegovom razvoju od prve verzije pa sve do danas. U trećem poglavlju biće opisane glavne mogućnosti i namena, dok je u četvrtom poglavlju dat pregled osnovnih osobina. Peto poglavlje će biti posvećeno razvojnim okruženjima, biće reči o osnovnim karakteristikama sledećih razvojnih okruženja: Xcode, Playground, Cocoa Touch, SublimeText i Atom. U šestom poglavlju biće opisan način instalacije i pokretanja Swift-a na Windows i Linux operativnim sistemima. Primeri i kratka objašnjenja k\^{o}da biće data u sedmom poglavlju. Tema poslednjeg poglavlja će biti specifičnosti ovog programskog jezika.
 
 \section{Nastanak i istorijski razvoj}
 \label{sec:drugiDeo}
 Razvoj programskog jezika Swift započeo je 2010. godine Chris Lattner, koji je implementirao veći deo osnovne strukture jezika, za čije je postojanje znala samo nekolicina ljudi. Tek su krajem 2011. godine i drugi programeri počeli da sarađuju na projektu Swift, a u julu 2013. godine on je postao glavni fokus grupe Apple Developer Tools \cite{mastering_swift3}. 
 
-Swift je predstavljen na međunarodnoj konferenciji programera (eng.~{\em Worldwide Developers Conference - WWDC}) 2014. godine, uz integrisano razvojno okruženje Xcode 6 i OS 8 \cite{thenextweb_sajt}. Apple je zvanično objavio Swift u decembru 2015. godine, kao projekat otvorenog k\^{o}da i pokrenuo je veb sajt \url{http://swift.org}, koji je posvećen zajednici Swift. Swift skladište nalazi se na GitHub stranici kompanije Apple (\url{http://github.com/apple}). Swift razvojno skladište (\url{https://github.com/apple/swift-evolution}) prati napredak Swift-a, dokumentujući predložene promene. U razvojnom skladištu može  se pronaći lista predloženih promena koje su prihvaćene i onih koje su odbijene. Swift 3 sadrži nekoliko poboljšanja koje je preporučila zajednica programera. U tabeli \ref{tab:tabela1} se nalaze sve do sada izbačene verzije programskog jezika Swift, u hronološkom redosledu.
+Swift je predstavljen na međunarodnoj konferenciji programera (eng.~{\em Worldwide Developers Conference - WWDC}) 2014. godine, uz integrisano razvojno okruženje Xcode 6 i OS 8 \cite{thenextweb_sajt}. Apple je zvanično objavio Swift u decembru 2015. godine, kao projekat otvorenog k\^{o}da i pokrenuo je veb sajt \url{http://swift.org}, koji je posvećen zajednici Swift. Swift skladište nalazi se na GitHub stranici kompanije Apple (\url{http://github.com/apple}). Swift razvojno skladište (\url{https://github.com/apple/swift-evolution}) prati napredak Swift-a, dokumentujući predložene promene. U razvojnom skladištu može se pronaći lista predloženih promena koje su prihvaćene i onih koje su odbijene. Swift 3 sadrži nekoliko poboljšanja koje je preporučila zajednica programera. U tabeli \ref{tab:tabela1} se nalaze sve do sada izbačene verzije programskog jezika Swift, u hronološkom redosledu.
 
 \begin{table}[h!]
 \begin{center}
@@ -177,9 +177,9 @@ Neke od mogućnosti koje pruža pomoću svojih funkcija su: \cite{mastering_swif
 \begin{itemize}
 \item Automatsko utvrđivanje tipova - Swift može automatski da utvrdi tip promenljive ili konstante na osnovu inicijalne
 vrednosti. 
-\item Generički tipovi - generički tipovi omogućavaju da se piše kod jednom za izvršenje identičnih
+\item Generički tipovi - generički tipovi omogućavaju da se piše k\^{o}d jednom za izvršenje identičnih
 zadataka za različite tipove objekata dok se zadržava bezbednost tipa. 
-\item Sintaksa zatvorenog izraza - zatvoreni izrazi su samostalni blokovi funkcionalnosti koji mogu da se proslede i upotrebe u kodu.
+\item Sintaksa zatvorenog izraza - zatvoreni izrazi su samostalni blokovi funkcionalnosti koji mogu da se proslede i upotrebe u k\^{o}du.
 \item Pseudoklase - pseudoklasa definiše promenljivu koja možda nema vrednost.
 \item Switch iskaz - Switch iskaz je drastično poboljšan funkcijama, kao što su poklapanje šablona i
 zaštitni uslovi; zahvaljujući njima, izbegnute su automatske greške.
@@ -271,7 +271,7 @@ Postoji 9 verzija ovog okruženja, a od verzije 6, obuhvata i programski jezik S
 
 \subsection{Playground}
 \label{subsec:podnaslovPlayground}
-Playground  je interaktivno radno okruženje koje omogućava da pišemo k\^{o}d i odmah vidimo rezultate čim su promene izvršene u k\^{o}du. Kako bismo mogli da koristimo ovaj okvir potrebno je prvo da pokrenemo Xcode i zatim izaberemo opciju Get started with a playground. Sastoji se od nekoliko delova, među kojima su najvažniji: 
+Playground je interaktivno radno okruženje koje omogućava pisanje kodova, a rezultati se vide odmah, čim su promene izvršene u k\^{o}du. Da bi se koristio ovaj okvir potrebno je prvo pokrenuti Xcode i zatim izaberati opciju Get started with a playground. Okruženje se sastoji od nekoliko delova, među kojima su najvažniji: 
 \begin{itemize}
 \item Prostor za kodiranje.
 \item Bočna traka za rezultate.
@@ -290,21 +290,21 @@ Sublime Text i Atom, iako nisu prvenstveno namenjeni za razvijanje Swift program
 
 \section{Instalacija i uputstvo za pokretanje}	
 \label{sec:sestiDeo}
-Programski jezik Swift se može koristiti na različitim operativnim sistemima. Ukoliko koristimo MAC operativni sistem, dovoljno je da se preuzme i instalira Xcode razvojno okruženje, jer Xcode uključuje izdanje Swift-a koje podržava Apple. Za Linux i Windows instalacija i pokretanje su složeniji, i biće prikazano u ovom poglavlju.
+Programski jezik Swift se može koristiti na različitim operativnim sistemima. Ukoliko se koristi MAC operativni sistem, dovoljno je da se preuzme i instalira Xcode razvojno okruženje, jer Xcode uključuje izdanje Swift-a koje podržava Apple. Za Linux i Windows, instalacija i pokretanje su složeniji, i biće prikazani u ovom poglavlju.
 
 \subsection{Swift na Windows-u}
 \label{subsec:podnaslovWindows}
-Za instalaciju programskog jezika Swift na Windows-u potrebno je prvo da ga preuzmemo sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga nam se pojavljuje prozor za instalaciju, gde pratimo dalja uputstva i tako instaliramo Swift i kompajler za ovaj jezik. Nakon završetka instalacije, potreban nam je editor teksta u kojem želimo da kodiramo. Možemo koristiti bilo koje od gore navedenih razvojnih okruženja u kojem nam je udobno da radimo. U ovom primeru koristićemo \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}, koji je jednostavan, besplatan i lak za instalaciju.
+Za instalaciju programskog jezika Swift na Windows-u potrebno ga je prvo preuzeti sa ovog \href{https://swiftforwindows.github.io}{linka}. Nakon toga, pojavljuje se prozor za instalaciju, gde se prate dalja uputstva i tako instalira Swift i kompajler za Swift. Nakon završetka instalacije, potreban je editor teksta u kojem se piše k\^{o}d. Može se koristiti bilo koje razvojno okruženja, u ovom primeru koristi se \href{https://notepad-plus-plus.org/download/v7.6.4.html}{Notepad++}, koji je jednostavan, besplatan i lak za instalaciju.
 
-Nakon instalacije okruženja, napisaćemo jednostavan program koji ćemo kasnije pokrenuti pomoću Windows komandne linije. Prvo je potrebno da otvorimo novi Notepad++ fajl, i u njega unosimo komandu za ispis.
+Nakon instalacije okruženja, treba napisati jednostavan program koji će se kasnije pokrenuti pomoću Windows komandne linije. Prvo je potrebno otvoriti novi Notepad++ fajl, i u njega uneti komandu za ispis.
 
 \begin{lstlisting}[language=bash, caption={Primer komande}]
 print("Hello world!")
 \end{lstlisting}
 
-Da bi sačuvali ovaj k\^{o}d, koristićemo File > Save As i izabrati Swift file iz Save As Type menija. Ako u meniju nedostaje tip ovog fajla izabraćemo all files, i dodati .swift fajl ekstenziju nakon što smo dali odgovarajuće ime fajlu.
+Za čuvanje ovog k\^{o}da, koristi se komanda File > Save As i bira se Swift file iz Save As Type menija. Ako u meniju nedostaje tip ovog fajla, potrebno je izabrati all files, i dodati .swift fajl ekstenziju, nakon što je dodeljeno odgovarajuće ime fajlu.
 
-Sada kada imamo program, želimo da ga kompajliramo i pokrenemo. Za kompajliranje i pokretanje koristimo korisnički interfejs Swift-a koji je prikazan na slici \ref{fig:windows}.
+Kada je program napisan i sačuvan, potrebno ga je kompajlirati i pokrenuti. Za kompajliranje i pokretanje koristi se korisnički interfejs Swift-a koji je prikazan na slici \ref{fig:windows}.
 
 \begin{figure}[h!]
 \begin{center}
@@ -314,28 +314,28 @@ Sada kada imamo program, želimo da ga kompajliramo i pokrenemo. Za kompajliranj
 \label{fig:windows}
 \end{figure}
 
-Nakon pritiska na Select File izabraćemo naš program koji smo prethodno napisali i pritisnuti Compile. Nakon što sačekamo da se kompilacija završi dobićemo poruku “Successfully compiled”.
-Jednom kompajliran program možemo pokrenuti neograničen broj puta.
+Nakon pritiska na Select File, potrebno je izabrati program i pritisnuti Compile. Nakon što se kompilacija završi dobija se poruku “Successfully compiled”.
+Jednom kompajliran program može se pokrenuti neograničen broj puta.
 
 \subsection{Swift na Linux-u}
 \label{subsec:podnaslovLinux}
-Kao i u prethodnom primeru biće nam potreban tekst editor gde ćemo napisati jednostavan k\^{o}d.
-Možemo koristiti bilo koji integrisani editor koji Linux poseduje. Na isti način ćemo iskodirati poruku za ispis "Hello World", kao u prethodnom primeru, i taj fajl ćemo sačuvati sa ekstenzijom .swift.
+Kao i u prethodnom primeru, potreban je tekst editor gde će se napisati jednostavan k\^{o}d.
+Može se koristiti bilo koji integrisani editor koji Linux poseduje. Na isti način, kodira se poruku za ispis "Hello World", kao u prethodnom primeru, i taj fajl se čuva sa ekstenzijom .swift.
 
-Da bismo koristili Swift na Linux-u moramo ga prvo instalirati. U terminalu kucamo sledeće komande:
+Da bi se koristio Swift na Linux-u mora se prvo instalirati. U terminalu se kucaju sledeće komande:
 
 \begin{lstlisting}[language=bash, caption={Instaliranje Swift-a}]
 	wget https://swift.org/builds/ubuntu1510/swift-2.2-SNAPSHOT-2015-12-10-a/swift-2.2-SNAPSHOT-2015-12-10-a-ubuntu15.10.tar.gz
 \end{lstlisting}
 
-Nakon preuzimanja, pozicioniraćemo se u folder Downloads i tamo raspakovati arhivu u kojoj se nalazi Swift instalacija.
+Nakon preuzimanja, potrebno je pozicionirati se u folder Downloads i tamo raspakovati arhivu u kojoj se nalazi Swift instalacija.
 
 \begin{lstlisting}[language=bash, caption={Raspakovanje Swift instalacije}]
   cd ~/Downloads
   tar -xvzf swift-2.2-SNAPSHOT*
 \end{lstlisting}
 
-Kada raspakujemo fajl potrebno je podesiti putanju do BIN-a kako bismo mogli da izvršavamo programe.
+Za raspakivanje fajla potrebno je podesiti putanju do BIN-a, kako bi programi mogli da se izvršavaju.
 
 \begin{lstlisting}[language=bash, caption={Podešavanje putanje do BIN-a}]
   cd ~/Downloads/swift-2.2-SNAPSHOT*
@@ -343,19 +343,19 @@ Kada raspakujemo fajl potrebno je podesiti putanju do BIN-a kako bismo mogli da 
   pwd
 \end{lstlisting}
 
-Kao rezultat komande pwd dobićemo tačnu lokaciju koju ćemo koristiti. Kopiramo i zamenimo je na sledeći način.
+Kao rezultat komande pwd dobija se tačna lokacija koja će se koristiti. Ona se kopira i zameni na sledeći način:
 \begin{lstlisting}[language=bash, caption={Kopiranje putanje}]
   export PATH=path_to_swift_usr_bin:$PATH
 \end{lstlisting}
 
-Zatim moramo instalirati jos par biblioteka kako bi omogućili da Swift nesmetano funkcioniše na Linux-u.
+Zatim je potrebno instalirati jos par biblioteka kako bi omogućili da Swift nesmetano funkcioniše na Linux-u.
 
 \begin{lstlisting}[language=bash, caption={Instalacija biblioteka}]
   sudo apt-get install clang libicu-dev
   swift -version
 \end{lstlisting}
 
-Na kraju, da bismo kompajlirali i pokrenuli prethodno napisan program potrebno je da ukucamo sledeće komande:
+Na kraju, za kompajliranje i pokretanje prethodno napisanog programa, potrebno je ukucati sledeće komande:
 
 \begin{lstlisting}[language=bash, caption={Komanda za kompajliranje}]
   swift imeprograma.swift
@@ -391,7 +391,7 @@ print(poruka1)										// Swift je najbolji progmski jezik
 \end{lstlisting}
 
 \begin{primer}
-Listu stringova koji su razdvojeni određenim separatorom, pravimo pomoću naredbe print, gde se prvo navode stringovi koji čine tu listu, a nakon toga separator i terminator. Možemo koristiti još jedan parametar u funkciji print(), pod nazivom toStream. Pomoću njega preusmeravamo ispis funkcije print(). Konkretno u ovom primeru preusmeravamo ispis u promenljivu ime4.
+Lista stringova koja je razdvojena određenim separatorom pravi se pomoću naredbe print, gde se prvo navode stringovi koji čine tu listu, a nakon toga separator i terminator. Može se koristiti još jedan parametar u funkciji print(), pod nazivom toStream. Pomoću njega preusmerava se ispis funkcije print(). Konkretno u ovom primeru preusmerava se ispis u promenljivu ime4.
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Lista stringova},frame=single, label=simple]
@@ -405,7 +405,7 @@ print(ime1,ime2,ime3,separator:", ", terminator:"", to:&ime4)
 \end{lstlisting}
 
 \begin{primer}
-U ovom primeru je pokazana funkcionalnost for i while petlje. Takođe jos jednom i mogućnost konkatenacije pomoću operatora +. Nakon for petlje u konzoli će biti ispisani brojevi od 0 do 10. U while petlji će se svakog puta dodavati po jedno slovo a, i tako 5 puta.
+U ovom primeru je pokazana funkcionalnost for i while petlje. Takođe, jos jednom i mogućnost konkatenacije pomoću operatora +. Nakon for petlje u konzoli će biti ispisani brojevi od 0 do 10. U while petlji će se svakog puta dodavati po jedno slovo a, i tako 5 puta.
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Petlje},frame=single, label=simple]
@@ -437,12 +437,12 @@ func dodaj_poene_i_novac(poeni:Int, novac:Float){
 dodaj_poene_i_novac(poeni: 30, novac: 1.45)
 dodaj_poene_i_novac(poeni: 60, novac: 2.86)
 
-print(skor)										// 90
-print(trenutno_stanje)							// 4.31
+print(skor)								// 90
+print(trenutno_stanje)					// 4.31
 \end{lstlisting}
 
 \begin{primer}
-Funkcije u programskom jeziku Swift dozvoljavaju da vraćamo jednu ili više vrednosti istovremeno. Sintaksa za povratnu vrednost je 'return(niz vrednosti koje želimo da vratimo)'.
+Funkcije u programskom jeziku Swift dozvoljavaju vraćanje jedne ili više vrednosti istovremeno. Sintaksa za povratnu vrednost je 'return(niz vrednosti koje se vraćaju)'.
 \end{primer}
 
 \begin{lstlisting}[language=Swift, caption={Funkcije koje imaju povratnu vrednost},frame=single, label=simple]
@@ -489,7 +489,7 @@ Swift je veoma pristupačan novim programerima, to je industrijski kvalitetan pr
 \begin{itemize}
 \item Promenjive su uvek inicijalizovane pre upotrebe.
 \item Obrađena je greška za pristupanje nepostojećem elementu niza (eng.~{\em out of bounds}).
-\item Integer-i su provereni za prekoračenje memorije (eng.~{\em overflow}).
+\item Celi brojevi (Integer) su provereni za prekoračenje memorije (eng.~{\em overflow}).
 \item Opcione promenjive zahtevaju eksplicitno rukovanje.
 \item Memorijom se upravlja automatski.
 \item Rukovanje greškama omogućava kontrolisani oporavak od neočekivanih prekida (crash).
