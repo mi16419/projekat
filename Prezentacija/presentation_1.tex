@@ -98,11 +98,11 @@
 %\usetheme{Ilmenau}
 %\usetheme{JuanLesPins}
 %\usetheme{Luebeck}
-\usetheme{Madrid}
+%\usetheme{Madrid}
 %\usetheme{Malmoe}
 %\usetheme{Marburg}
 %\usetheme{Montpellier}
-%\usetheme{PaloAlto}
+\usetheme{PaloAlto}
 %\usetheme{Pittsburgh}
 %\usetheme{Rochester}
 %\usetheme{Singapore}
@@ -141,9 +141,9 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Swift]{Razvoj i primena programskog jezika Swift} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[]{Razvoj i primena programskog jezika Swift} % The short title appears at the bottom of every slide, the full title is only on the title page
 
-\author[AD, PP, IM, IN]{Anđelković Dragica, Mandić Igor, Nikolić Igor, Petar Pejović} % Your name
+\author[]{Anđelković Dragica, Mandić Igor, Nikolić Igor, Petar Pejović} % Your name
 \institute[Matf] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
 Matematički fakultet \\ % Your institution for the title page
@@ -178,7 +178,7 @@ Matematički fakultet \\ % Your institution for the title page
 \frametitle{Nastanak i istorijski razvoj}
 \begin{itemize}
 \item  Razvoj je započeo 2010. godine Chris Lattner \cite{mastering_swift3}.
-\item  Predstavljen je na međunarodnoj konferenciji programera 2014. godine, uz  Xcode 6 i OS 8 \cite{thenextweb_sajt}.
+\item  Predstavljen je na međunarodnoj konferenciji programera 2014. godine, uz  Xcode 6\cite{thenextweb_sajt}.
 \item Apple je zvanično objavio Swift u decembru 2015. godine, kao projekat otvorenog k\^{o}da i pokrenuo je veb sajt.
 \item Do danas je izbačeno 5 verzija Swift-a:
 \begin{itemize}
@@ -210,7 +210,6 @@ Matematički fakultet \\ % Your institution for the title page
 %------------------------------------------------
 \begin{frame}
 \frametitle{Uticaji drugih programskih jezika}
-Preuzeti su određeni delovi iz različitih programskih jezika i poboljšani. Pregled preuzetih koncepata se nalaze u tabeli \ref{tab:koncepti}.
 
 \begin{table}[h!]
 \begin{center}
@@ -298,7 +297,6 @@ Podržane paradigme:
 %------------------------------------------------
 \begin{frame}
 \frametitle{Osnovne osobine}
-Zbog svojih osobina, 2016. godine, programski jezik Swift je bio najplaćeniji jezik u Americi. Na sledećem grafikonu (slika \ref{fig:grafikon}) prikazano je 10 najplaćenijih programskih jezika:
 
 \begin{figure}[hbt!]
 \begin{tikzpicture}
@@ -375,34 +373,45 @@ Programski jezik Swift se može koristiti na različitim operativnim sistemima:\
 
 \item{\textbf{Windows operativni sistem:}}
 \begin{itemize}
-\item{Preuzimanje sa oficijalnog sajta}.
-\item{Instalacija jezika Swift i kompajlera za ovaj jezik.}
-\item{Izvorni kod programa ima ekstenziju \underline{.swift}}.
-\item{Za kompajliranje i pokretanje primenjuje se korisnički interfejs Swift-a.}
+\item{Preuzimanje sa oficijalnog sajta}
+\item{Instalacija Swift-a i kompajlera za Swift.}
+\item{Izvorni k\^{o}d programa ima ekstenziju \underline{.swift}}
+\item{Za kompajliranje i pokretanje primenjuje se korisnički interfejs Swift-a}
 \end{itemize}
+
+\item{\textbf{MAC operativni sistem:}}
+\begin{itemize}
+\item{Dovoljno je preuzeti i instalirati Xcode razvojno okruženje.}
+\end{itemize}
+
 \end{itemize}
 
 \end{frame}
 %------------------------------------------------
 
 %------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Instalacija i uputstvo za pokretanje}
 
 \begin{itemize}
 
-\item{\textbf{Linux operativni sistem:}}
-\begin{itemize}
-\item{Preuzimanje sa oficijalnog sajta}.
-\item{Instalacija jezika Swift i kompajlera se vrši kucanjem komandi u terminalu.}
-\item{Izvorni kod programa ima ekstenziju \underline{.swift}}.
-\item{Kompajliranje i pokretanje se vrši kucanjem komandi u terminalu.}
-\end{itemize}
-		  
-\item{\textbf{MAC operativni sistem:}}
-\begin{itemize}
-\item{Dovoljno je preuzeti i instalirati Xcode razvojno okruženje.}
-\end{itemize}
+\item \textbf{Linux operativni sistem:}
+\begin{lstlisting}[language=bash, caption={Instaliranje Swift-a}]
+wget https://swift.org/builds/ubuntu1510/swift-2.2-SNAPSHOT-2015-12-10-a/swift-2.2-SNAPSHOT-2015-12-10-a-ubuntu15.10.tar.gz
+	
+tar -xvzf swift-2.2-SNAPSHOT*
+cd swift-2.2-SNAPSHOT*
+cd usr/bin
+pwd
+export PATH=path_to_swift_usr_bin:$PATH
+sudo apt-get install clang libicu-dev
+swift -version
+swift imeprograma.swift
+./imeprograma
+\end{lstlisting}
+
+
+		 
 \end{itemize}
 
 \end{frame}
@@ -474,7 +483,7 @@ Swift se dobro štiti od najzastupljenih programskih grešaka usvajanjem moderni
 \end{frame}
 
 %------------------------------------------------
-
+\section{Literatura}
 %------------------------------------------------
 
 \begin{frame}
