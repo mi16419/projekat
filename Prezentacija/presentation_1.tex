@@ -20,6 +20,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[english,serbian]{babel}
 \usepackage{pgfplots}
+\usepackage{listings}
 \pgfplotsset{compat=1.10}
 \usetikzlibrary{calc} 
 
@@ -27,6 +28,52 @@
 \definecolor{RYB2}{RGB}{251, 128, 114}
 \definecolor{RYB3}{RGB}{253, 180, 98}
 
+\lstdefinelanguage{Swift}{
+  keywords={associatedtype, class, deinit, enum, extension, func, import, init, inout, internal, let, operator, private, protocol, public, static, struct, subscript, typealias, var, break, case, continue, default, defer, do, else, fallthrough, for, guard, if, in, repeat, return, switch, where, while, as, catch, dynamicType, false, is, nil, rethrows, super, self, Self, throw, throws, true, try, associativity, convenience, dynamic, didSet, final, get, infix, indirect, lazy, left, mutating, none, nonmutating, optional, override, postfix, precedence, prefix, Protocol, required, right, set, Type, unowned, weak, willSet},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\newcommand\todos[1]{\textcolor{red}{#1}}
+
+\newtheorem{primer}{Primer}[section]
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{blue},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1000,                % start line enumeration with line 1000
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{mygreen},       % keyword style
+  language=Swift,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
 
 \mode<presentation> {
 
@@ -94,7 +141,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Swift]{Swift - jezik budućnosti} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Swift]{Razvoj i primena programskog jezika Swift} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author[AD, PP, IM, IN]{Anđelković Dragica, Mandić Igor, Nikolić Igor, Petar Pejović} % Your name
 \institute[Matf] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -326,11 +373,13 @@ Programski jezik Swift se može koristiti na različitim operativnim sistemima:\
 
 \begin{itemize}
 
-\item{\textbf{Windows operativni sistem:}}\\
-Nakon preuzimanja sa oficijalnog sajta, pojavljuje se prozor za instalaciju. Praćenjem daljih uputstava instalira se i Swift i kompajler za ovaj jezik.\\
-
-Izvorni kod programa ima ekstenziju \underline{.swift}. Za kompajliranje i pokretanje primenjuje se korisnički interfejs Swift-a.
-
+\item{\textbf{Windows operativni sistem:}}
+\begin{itemize}
+\item{Preuzimanje sa oficijalnog sajta}.
+\item{Instalacija jezika Swift i kompajlera za ovaj jezik.}
+\item{Izvorni kod programa ima ekstenziju \underline{.swift}}.
+\item{Za kompajliranje i pokretanje primenjuje se korisnički interfejs Swift-a.}
+\end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -342,33 +391,68 @@ Izvorni kod programa ima ekstenziju \underline{.swift}. Za kompajliranje i pokre
 
 \begin{itemize}
 
-\item{\textbf{Linux operativni sistem:}}\\
-Nakon preuzimanja sa oficijalnog sajta, potrebno je pratiti niz konk
-retnih komandi koje se kucaju u terminalu kako bi se instalirao programski jezik Swift.\\
-
-Da bismo kompajlirali i pokrenuli Swift program potrebno je da ukucamo sledeće komande u terminalu:
-
-
-		   
-
-\item{\textbf{MAC operativni sistem:}}\\
-Dovoljno je da se preuzme i instalira Xcode razvojno okruženje.
+\item{\textbf{Linux operativni sistem:}}
+\begin{itemize}
+\item{Preuzimanje sa oficijalnog sajta}.
+\item{Instalacija jezika Swift i kompajlera se vrši kucanjem komandi u terminalu.}
+\item{Izvorni kod programa ima ekstenziju \underline{.swift}}.
+\item{Kompajliranje i pokretanje se vrši kucanjem komandi u terminalu.}
+\end{itemize}
+		  
+\item{\textbf{MAC operativni sistem:}}
+\begin{itemize}
+\item{Dovoljno je preuzeti i instalirati Xcode razvojno okruženje.}
+\end{itemize}
 \end{itemize}
 
 \end{frame}
 %------------------------------------------------
 \section{Primeri}
 %------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Primeri}
+\begin{lstlisting}[language=Swift, caption={Ispis teksta},frame=single, label=simple]
+print("Hello world!")				    // Hello World!
+print("Hello world!");					// Hello World!
+\end{lstlisting}
+
+\begin{lstlisting}[language=Swift, caption={Stringovi i konkatenacija stringova},frame=single, label=simple]
+var ime = "Swift"
+var jezik = "programski jezik"
+
+var poruka = " je najbolji "
+var poruka1 = "\ (ime) je najbolji \ (jezik) !" 
+
+print(ime,poruka,jezik,"!")
+// Swift je najbolji progmski jezik!
+print(poruka1) 
+// Swift je najbolji progmski jezik!
+\end{lstlisting}
 
 \end{frame}
 
 %------------------------------------------------
 
 %------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Primeri}
+\begin{lstlisting}[language=Swift, caption={Klasa},frame=single, label=simple]
+class Osoba {
+    var ime: String
+    var godine: Int
+    
+    init(ime: String, godine: Int) {
+        self.ime = ime
+        self.godine = godine
+    }
+    func getIme() -> String {
+        return "Tvoje ime je \(self.ime)"
+	}
+}
+var osoba1 = Osoba(ime: "Daca", godine: 22)
+print(osoba1.getIme))								// Daca
+\end{lstlisting}
+
 
 \end{frame}
 %------------------------------------------------
