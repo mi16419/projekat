@@ -1,20 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Beamer Presentation
-% LaTeX Template
-% Version 1.0 (10/11/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND THEMES
-%----------------------------------------------------------------------------------------
-
 \documentclass{beamer}
 
 \usepackage[utf8x]{inputenc}
@@ -77,61 +60,7 @@
 
 \mode<presentation> {
 
-% The Beamer class comes with a number of default slide themes
-% which change the colors and layouts of slides. Below this is a list
-% of all the themes, uncomment each in turn to see what they look like.
-
-%\usetheme{default}
-%\usetheme{AnnArbor}
-%\usetheme{Antibes}
-%\usetheme{Bergen}
-%\usetheme{Berkeley}
-%\usetheme{Berlin}
-%\usetheme{Boadilla}
-%\usetheme{CambridgeUS}
-%\usetheme{Copenhagen}
-%\usetheme{Darmstadt}
-%\usetheme{Dresden}
-%\usetheme{Frankfurt}
-%\usetheme{Goettingen}
-%\usetheme{Hannover}
-%\usetheme{Ilmenau}
-%\usetheme{JuanLesPins}
-%\usetheme{Luebeck}
-%\usetheme{Madrid}
-%\usetheme{Malmoe}
-%\usetheme{Marburg}
-%\usetheme{Montpellier}
 \usetheme{PaloAlto}
-%\usetheme{Pittsburgh}
-%\usetheme{Rochester}
-%\usetheme{Singapore}
-%\usetheme{Szeged}
-%\usetheme{Warsaw}
-
-% As well as themes, the Beamer class has a number of color themes
-% for any slide theme. Uncomment each of these in turn to see how it
-% changes the colors of your current slide theme.
-
-%\usecolortheme{albatross}
-%\usecolortheme{beaver}
-%\usecolortheme{beetle}
-%\usecolortheme{crane}
-%\usecolortheme{dolphin}
-%\usecolortheme{dove}
-%\usecolortheme{fly}
-%\usecolortheme{lily}
-%\usecolortheme{orchid}
-%\usecolortheme{rose}
-%\usecolortheme{seagull}
-%\usecolortheme{seahorse}
-%\usecolortheme{whale}
-%\usecolortheme{wolverine}
-
-%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
-%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
-
-%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
 
 \usepackage{graphicx} % Allows including images
@@ -162,23 +91,21 @@ Matematički fakultet \\ % Your institution for the title page
 \frametitle{Uvod} % Table of contents slide, comment this block out to remove it
 \tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 
+\end{frame}
 
 %----------------------------------------------------------------------------------------
 %	PRESENTATION SLIDES
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-
-
-\end{frame}
-%------------------------------------------------
 \section{Nastanak i istorijski razvoj}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Nastanak i istorijski razvoj}
+
 \begin{itemize}
 \item  Razvoj je započeo 2010. godine Chris Lattner \cite{mastering_swift3}.
-\item  Predstavljen je na međunarodnoj konferenciji programera 2014. godine, uz  Xcode 6\cite{thenextweb_sajt}.
+\item  Predstavljen je na međunarodnoj konferenciji programera 2014. godine, uz  Xcode 6 \cite{thenextweb_sajt}.
 \item Apple je zvanično objavio Swift u decembru 2015. godine, kao projekat otvorenog k\^{o}da i pokrenuo je veb sajt.
 \item Do danas je izbačeno 5 verzija Swift-a:
 \begin{itemize}
@@ -189,8 +116,8 @@ Matematički fakultet \\ % Your institution for the title page
 \item{Swift 5.0} - 2019. godine
 \end{itemize}
 \end{itemize}
-
 \end{frame}
+
 %------------------------------------------------
 \subsection{Mesto u razvojnom stablu}
 %------------------------------------------------
@@ -201,10 +128,11 @@ Matematički fakultet \\ % Your institution for the title page
 \begin{center}
 \includegraphics[scale=0.5]{razvojno_stablo.png}
 \end{center}
+\caption{Razvojno stablo}
 \label{fig:razvojno_stablo}
 \end{figure}
-
 \end{frame}
+
 %------------------------------------------------
 \subsection{Uticaji drugih programskih jezika}
 %------------------------------------------------
@@ -229,13 +157,14 @@ C\# i Objective-C & Označeni i neoznačeni celi brojevi \\ \hline
 \end{center}
 \end{table}
 \end{frame}
+
 %------------------------------------------------
 \section{Osnovna namena, svrha i mogućnosti}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Osnovna namena, svrha i mogućnosti}
-\begin{columns}[t]
 
+\begin{columns}[t]
 \column{.5\textwidth}
 Osnovna namena:
 \begin{itemize}
@@ -249,14 +178,14 @@ stvaranju Swift aplikacija koje će se izvršavati i na Android platformama
 \end{itemize}
 
 \column{.5\textwidth} 
-Neke od mogućnosti koje pruža \cite{mastering_swift3}:
+Neke od mogućnosti koje pruža su \cite{mastering_swift3}:
 \begin{itemize}
 \item{Automatsko utvrđivanje tipova}
 \item{Sintaksa zatvorenog izraza}
 \item{Generički tipovi}
 \item{Pseudoklase}
 \item{Višestruki povratni tipovi}
-\item{Preklapanje tipova}
+\item{Preklapanje operatora}
 \end{itemize}
 Funkcija Xcode-a \textbf{Mix and match}.
 
@@ -267,10 +196,10 @@ Funkcija Xcode-a \textbf{Mix and match}.
 %------------------------------------------------
 \begin{frame}
 \frametitle{Osnovne osobine}
-\begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
-\column{.5\textwidth} % Left column and width
-Osnovne osobine \cite{swift_programming} :
+\begin{columns}[t]
+\column{.5\textwidth} 
+Osnovne osobine \cite{swift_programming}:
 \begin{itemize}
 \item{\textbf{Objektno orijentisan}}
 \item{\textbf{Funkcionalan}}
@@ -281,7 +210,7 @@ Osnovne osobine \cite{swift_programming} :
 \item{\textbf{Kompatibilnost sa razvojnim okruženjem Cocoa}}
 \end{itemize}
 
-\column{.5\textwidth} % Right column and width
+\column{.5\textwidth} 
 Podržane paradigme:
 \begin{itemize}
 \item{\textbf{Objektno orijentisana paradigma}}
@@ -291,6 +220,7 @@ Podržane paradigme:
 
 \end{columns}
 \end{frame}
+
 %------------------------------------------------
 
 %------------------------------------------------
@@ -344,6 +274,7 @@ coordinates{ (PHP,89)  } ;
 \label{fig:grafikon}
 \end{figure}
 \end{frame}
+
 %------------------------------------------------
 \section{Okruženja}
 %------------------------------------------------
@@ -373,19 +304,19 @@ Programski jezik Swift se može koristiti na različitim operativnim sistemima:\
 \item{\textbf{Windows operativni sistem:}}
 \begin{itemize}
 \item{Preuzimanje sa oficijalnog sajta}
-\item{Instalacija Swift-a i kompajlera za Swift.}
+\item{Instalacija Swift-a i kompajlera za Swift}
 \item{Izvorni k\^{o}d programa ima ekstenziju \underline{.swift}}
 \item{Za kompajliranje i pokretanje primenjuje se korisnički interfejs Swift-a}
 \end{itemize}
 
 \item{\textbf{MAC operativni sistem:}}
 \begin{itemize}
-\item{Dovoljno je preuzeti i instalirati Xcode razvojno okruženje.}
+\item{Dovoljno je preuzeti i instalirati Xcode razvojno okruženje}
 \end{itemize}
 
 \end{itemize}
-
 \end{frame}
+
 %------------------------------------------------
 
 %------------------------------------------------
@@ -393,7 +324,6 @@ Programski jezik Swift se može koristiti na različitim operativnim sistemima:\
 \frametitle{Instalacija i uputstvo za pokretanje}
 
 \begin{itemize}
-
 \item \textbf{Linux operativni sistem:}
 \begin{lstlisting}[language=bash, caption={Instaliranje Swift-a}]
 wget https://swift.org/builds/ubuntu1510/swift-2.2-SNAPSHOT-2015-12-10-a/swift-2.2-SNAPSHOT-2015-12-10-a-ubuntu15.10.tar.gz
@@ -408,17 +338,16 @@ swift -version
 swift imeprograma.swift
 ./imeprograma
 \end{lstlisting}
-
-
-		 
 \end{itemize}
 
 \end{frame}
+
 %------------------------------------------------
 \section{Primeri}
 %------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{Primeri}
+
 \begin{lstlisting}[language=Swift, caption={Ispis teksta},frame=single, label=simple]
 print("Hello world!")				    // Hello World!
 print("Hello world!");					// Hello World!
@@ -444,6 +373,7 @@ print(poruka1)
 %------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{Primeri}
+
 \begin{lstlisting}[language=Swift, caption={Klasa},frame=single, label=simple]
 class Osoba {
     var ime: String
@@ -463,6 +393,7 @@ print(osoba1.getIme))								// Daca
 
 
 \end{frame}
+
 %------------------------------------------------
 \section{Specifičnosti}
 %------------------------------------------------
@@ -471,10 +402,10 @@ print(osoba1.getIme))								// Daca
 
 Swift se dobro štiti od najzastupljenih programskih grešaka usvajanjem modernih paterna programiranja \cite{swift_sajt}:
 \begin{itemize}
-\item Promenjive su uvek inicijalizovane pre upotrebe
+\item Promenljive su uvek inicijalizovane pre upotrebe
 \item Obrađena je greška za pristupanje nepostojećem elementu niza (eng.~{\em out of bounds})
 \item Celi brojevi (eng.~{\em integers}) su provereni za prekoračenje memorije (eng.~{\em overflow})
-\item Opcione promenjive zahtevaju eksplicitno rukovanje
+\item Opcione promenljive zahtevaju eksplicitno rukovanje
 \item Memorijom se upravlja automatski
 \item Rukovanje greškama omogućava kontrolisani oporavak od neočekivanih prekida (eng.~{\em crash})
 \end{itemize}
